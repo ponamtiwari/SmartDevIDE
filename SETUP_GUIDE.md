@@ -1,8 +1,8 @@
-# SmartDevIDE - Complete Setup Guide
+# Smart Dev IDE - Complete Setup Guide
 
 ## 🚀 Getting Started
 
-This guide will help you set up and configure SmartDevIDE from scratch.
+This guide will help you set up and configure Smart Dev IDE from scratch.
 
 ## 📋 Prerequisites
 
@@ -57,21 +57,21 @@ code --install-extension smartdevide-2.0.1.vsix
 
 1. Open VS Code or Cursor
 2. Press `Ctrl+Shift+P` (Windows/Linux) or `Cmd+Shift+P` (Mac)
-3. Type **SmartDevIDE** – you should see all commands listed
+3. Type **Smart Dev IDE** – you should see all commands listed
 
 ### Commands summary
 
 | Command | Description |
 |--------|-------------|
-| **SmartDevIDE: Select Role** | Choose developer role |
-| **SmartDevIDE: Select Model** | Choose AI model |
-| **SmartDevIDE: Generate Code** | Generate code with AI (`Cmd+Shift+G` / `Ctrl+Shift+G`) |
-| **SmartDevIDE: Auto-Detect Role** | Detect role from file type |
-| **SmartDevIDE: Open Demo** | Open demo panel |
-| **SmartDevIDE: Generate Solution** | Open demo panel |
-| **SmartDevIDE: Enhance Prompt** | Preview enhanced prompt |
-| **SmartDevIDE: Open Settings** | Open extension settings |
-| **SmartDevIDE: Show Status Info** | View current role and model |
+| **Smart Dev IDE: Select Role** | Choose developer role |
+| **Smart Dev IDE: Select Model** | Choose AI model |
+| **Smart Dev IDE: Generate Code** | Generate code with AI (`Cmd+Shift+G` / `Ctrl+Shift+G`) |
+| **Smart Dev IDE: Auto-Detect Role** | Detect role from file type |
+| **Smart Dev IDE: Open Demo** | Open demo panel |
+| **Smart Dev IDE: Generate Solution** | Open demo panel |
+| **Smart Dev IDE: Enhance Prompt** | Preview enhanced prompt |
+| **Smart Dev IDE: Open Settings** | Open extension settings |
+| **Smart Dev IDE: Show Status Info** | View current role and model |
 
 ## ⚙️ Configuration
 
@@ -79,7 +79,7 @@ code --install-extension smartdevide-2.0.1.vsix
 
 **Option A: Via Command Palette**
 ```
-Ctrl+Shift+P → SmartDevIDE: Select Role
+Ctrl+Shift+P → Smart Dev IDE: Select Role
 ```
 
 **Option B: Via Status Bar**
@@ -147,7 +147,7 @@ If using Cursor IDE:
 ### Step 3: Select Your Model
 
 ```
-Ctrl+Shift+P → SmartDevIDE: Select Model
+Ctrl+Shift+P → Smart Dev IDE: Select Model
 ```
 
 Choose from available models across all configured providers.
@@ -316,7 +316,7 @@ Add custom shortcuts in `keybindings.json`:
 ### Check Current Status
 
 ```
-Ctrl+Shift+P → SmartDevIDE: Show Status Info
+Ctrl+Shift+P → Smart Dev IDE: Show Status Info
 ```
 
 Displays:
@@ -337,7 +337,7 @@ View model pricing in model selection:
 Test the enhancement system:
 
 ```
-Ctrl+Shift+P → SmartDevIDE: Enhance Prompt
+Ctrl+Shift+P → Smart Dev IDE: Enhance Prompt
 ```
 
 Enter a simple prompt like: "Create a user registration form"
@@ -357,7 +357,7 @@ Compare original vs enhanced to see the difference!
 
 1. Check VS Code version >= 1.75.0
 2. Reload window: `Ctrl+Shift+P` → "Reload Window"
-3. Check extension logs: Output → SmartDevIDE
+3. Check extension logs: Output → Smart Dev IDE
 
 ### API Key Errors
 
@@ -475,17 +475,17 @@ Use extension in automated workflows:
 
 ## 💬 Get Help
 
-- **Documentation**: [GitHub Wiki](https://github.com/poonamtiwari/smartdevide/wiki)
-- **Issues**: [GitHub Issues](https://github.com/poonamtiwari/smartdevide/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/poonamtiwari/smartdevide/discussions)
+- **Documentation**: [GitHub Wiki](https://github.com/ponamtiwari/SmartDevIDE/wiki)
+- **Issues**: [GitHub Issues](https://github.com/ponamtiwari/SmartDevIDE/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/ponamtiwari/SmartDevIDE/discussions)
 
 ## 🎉 You're Ready!
 
-Your SmartDevIDE is now fully configured. Try:
+Your Smart Dev IDE is now fully configured. Try:
 
 1. Open a file
 2. Check your role in status bar
-3. Use `Ctrl+Shift+P` → SmartDevIDE commands
+3. Use `Ctrl+Shift+P` → Smart Dev IDE commands
 4. Start coding with AI assistance!
 
 Happy coding! 🚀

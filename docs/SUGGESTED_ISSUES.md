@@ -1,6 +1,6 @@
-# Suggested GitHub Issues for SmartDevIDE
+# Suggested GitHub Issues for Smart Dev IDE
 
-Use these as **titles** and **bodies** when you click **New issue** on the [Issues](https://github.com/poonamtiwari/smartdevide/issues) page. Copy the block under each heading into the issue form.
+Use these as **titles** and **bodies** when you click **New issue** on the [Issues](https://github.com/ponamtiwari/SmartDevIDE/issues) page. Copy the block under each heading into the issue form.
 
 ---
 
@@ -15,7 +15,7 @@ Add a short Wiki (or README) section that explains the Security Review feature a
 
 ## Details
 - Security Review scans code for SQL injection, hardcoded secrets, insecure auth, XSS/path traversal.
-- It can be run from Command Palette or editor context menu (SmartDevIDE: Security Review).
+- It can be run from Command Palette or editor context menu (Smart Dev IDE: Security Review).
 - A markdown report opens beside the editor with severity and one-line recommendations.
 
 ## Acceptance
@@ -73,12 +73,12 @@ After Generate Code, a quick pick appears offering unit tests, edge cases, stati
 
 ## Issue 4: Publish extension to VS Code Marketplace
 
-**Title:** `Publish SmartDevIDE to VS Code Marketplace`
+**Title:** `Publish Smart Dev IDE to VS Code Marketplace`
 
 **Body:**
 ```markdown
 ## Summary
-Allow users to install SmartDevIDE from the VS Code Marketplace instead of only from a VSIX file.
+Allow users to install Smart Dev IDE from the VS Code Marketplace instead of only from a VSIX file.
 
 ## Tasks
 - [ ] Create/use a publisher account on [Visual Studio Marketplace](https://marketplace.visualstudio.com/)
@@ -115,7 +115,7 @@ Enable the Discussions tab for this repository so the community can ask question
 **Body:**
 ```markdown
 ## Summary
-**SmartDevIDE: Run Static Checks** runs ESLint, tsc, or php -l when the project has those tools. When none are configured, the user only sees a generic "No runner configured" message.
+**Smart Dev IDE: Run Static Checks** runs ESLint, tsc, or php -l when the project has those tools. When none are configured, the user only sees a generic "No runner configured" message.
 
 ## Proposed improvement
 - If no tool runs, suggest in the message how to add ESLint/Prettier/php -l (one line or link).
@@ -126,7 +126,7 @@ Enable the Discussions tab for this repository so the community can ask question
 
 ## How to use this file
 
-1. Open [github.com/poonamtiwari/smartdevide/issues](https://github.com/poonamtiwari/smartdevide/issues).
+1. Open [github.com/ponamtiwari/SmartDevIDE/issues](https://github.com/ponamtiwari/SmartDevIDE/issues).
 2. Click **New issue**.
 3. Pick a suggested issue above: copy the **Title** into the issue title and the **Body** (inside the code block) into the issue body.
 4. Add labels (e.g. documentation, enhancement) if your repo uses them.

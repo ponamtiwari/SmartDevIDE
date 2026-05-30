@@ -1,4 +1,4 @@
-# Template for Ideas category at https://github.com/poonamtiwari/smartdevide/discussions
+# Template for Ideas category at https://github.com/ponamtiwari/SmartDevIDE/discussions
 # Enable Discussions in repo Settings and create an "Ideas" category (slug: ideas) to use this
 title: "[Ideas] "
 labels: []
@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Share an idea for SmartDevIDE (features, workflows, integrations).
+        Share an idea for Smart Dev IDE (features, workflows, integrations).
   - type: input
     id: idea-title
     attributes:

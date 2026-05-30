@@ -20,7 +20,7 @@ export async function runSecurityReview(
 ): Promise<void> {
     const apiKey = getOpenAIKey();
     if (!apiKey?.trim()) {
-        vscode.window.showErrorMessage('SmartDevIDE: No API key. Set smartdevide.models.openai.apiKey or use the extension default.');
+        vscode.window.showErrorMessage('Smart Dev IDE: No API key. Set smartdevide.models.openai.apiKey or use the extension default.');
         return;
     }
     let modelId = getModelId();
@@ -40,16 +40,16 @@ export async function runSecurityReview(
     try {
         const result = await completeChat(apiKey, modelId, messages, 1024);
         if (result.error || !result.content?.trim()) {
-            vscode.window.showErrorMessage(`SmartDevIDE: ${result.error || 'No review returned'}`);
+            vscode.window.showErrorMessage(`Smart Dev IDE: ${result.error || 'No review returned'}`);
             if (result.error) outputChannel.appendLine(`[SecurityReview] ${result.error}`);
             return;
         }
-        const report = `# SmartDevIDE: Security Review\n\n**File:** ${document.fileName}\n**Language:** ${languageId}\n\n---\n\n${result.content.trim()}`;
+        const report = `# Smart Dev IDE: Security Review\n\n**File:** ${document.fileName}\n**Language:** ${languageId}\n\n---\n\n${result.content.trim()}`;
         const doc = await vscode.workspace.openTextDocument({ content: report, language: 'markdown' });
         await vscode.window.showTextDocument(doc, { preview: false, viewColumn: vscode.ViewColumn.Beside });
     } catch (err) {
         const msg = err instanceof Error ? err.message : String(err);
         outputChannel.appendLine(`[SecurityReview] ${msg}`);
-        vscode.window.showErrorMessage(`SmartDevIDE: ${msg}`);
+        vscode.window.showErrorMessage(`Smart Dev IDE: ${msg}`);
     }
 }

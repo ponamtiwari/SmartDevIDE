@@ -1,13 +1,13 @@
 # Installation
 
-How to install SmartDevIDE in **VS Code** and **Cursor**.
+How to install Smart Dev IDE in **VS Code** and **Cursor**.
 
 ---
 
 ## Prerequisites
 
 - **VS Code** or **Cursor**
-- A **SmartDevIDE VSIX** file (e.g. `smartdevide-2.0.2.vsix` from the [Releases](https://github.com/poonamtiwari/smartdevide/releases) or built locally with `npm run package`)
+- A **Smart Dev IDE VSIX** file (e.g. `smartdevide-2.0.2.vsix` from the [Releases](https://github.com/ponamtiwari/SmartDevIDE/releases) or built locally with `npm run package`)
 
 ---
 
@@ -42,10 +42,10 @@ Cursor uses the same VS Code extension format, so the same VSIX works in both.
 
 ## After installation
 
-1. **Select role** – `Cmd+Shift+P` / `Ctrl+Shift+P` → **SmartDevIDE: Select Role**  
-2. **Select model** – **SmartDevIDE: Select Model**  
+1. **Select role** – `Cmd+Shift+P` / `Ctrl+Shift+P` → **Smart Dev IDE: Select Role**  
+2. **Select model** – **Smart Dev IDE: Select Model**  
 3. **Add API key** (e.g. OpenAI) – Settings → search “smartdevide” → set **OpenAI API Key**  
-4. **Generate code** – `Cmd+Shift+G` or **SmartDevIDE: Generate Code** from the palette  
+4. **Generate code** – `Cmd+Shift+G` or **Smart Dev IDE: Generate Code** from the palette  
 
 ---
 
@@ -69,4 +69,4 @@ The VSIX is created in the project folder (e.g. `smartdevide-2.0.2.vsix`).
 - **API errors** – Check your API key in Settings and that the chosen model is enabled  
 - **Cursor** – Use the same steps as VS Code; the extension is compatible  
 
-For more help, see the main [README](https://github.com/poonamtiwari/smartdevide#readme) or open an [Issue](https://github.com/poonamtiwari/smartdevide/issues).
+For more help, see the main [README](https://github.com/ponamtiwari/SmartDevIDE#readme) or open an [Issue](https://github.com/ponamtiwari/SmartDevIDE/issues).

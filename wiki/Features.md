@@ -1,6 +1,6 @@
-# SmartDevIDE Features
+# Smart Dev IDE Features
 
-Overview of what SmartDevIDE does and how it fits into your workflow.
+Overview of what Smart Dev IDE does and how it fits into your workflow.
 
 ---
 
@@ -35,8 +35,8 @@ Generate Code uses OpenAI; other features can use the selected model where suppo
 ## AI suggestions & quick actions
 
 - **Inline completions** – Ghost-text suggestions as you type  
-- **Fix with AI** – Quick Fix (lightbulb) → SmartDevIDE: Fix with AI  
-- **Explain** – Quick Fix → SmartDevIDE: Explain  
+- **Fix with AI** – Quick Fix (lightbulb) → Smart Dev IDE: Fix with AI  
+- **Explain** – Quick Fix → Smart Dev IDE: Explain  
 - **Generate Code** – Command Palette or `Cmd+Shift+G` / `Ctrl+Shift+G`  
 
 ---
@@ -44,7 +44,7 @@ Generate Code uses OpenAI; other features can use the selected model where suppo
 ## Security-first by design
 
 - **Secure defaults** – Generated code is guided to use parameterized queries, secure auth, no hardcoded secrets  
-- **Security Review** – Command **SmartDevIDE: Security Review** on a file or selection for a short report on:
+- **Security Review** – Command **Smart Dev IDE: Security Review** on a file or selection for a short report on:
   - SQL injection
   - Insecure auth (e.g. plain-text passwords)
   - Hardcoded secrets
@@ -67,7 +67,7 @@ After **Generate Code**, a quick pick offers these options.
 
 ## Project style (never fight the style guide)
 
-SmartDevIDE reads your project and tooling:
+Smart Dev IDE reads your project and tooling:
 
 - **Prettier** – indent, quotes, semicolons, etc.  
 - **ESLint** – rules and extends  

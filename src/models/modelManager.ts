@@ -82,7 +82,7 @@ export class ModelManager {
 
         const selected = await vscode.window.showQuickPick(items, {
             placeHolder: 'Select AI model',
-            title: 'SmartDevIDE - Model Selection',
+            title: 'Smart Dev IDE - Model Selection',
             matchOnDescription: true,
             matchOnDetail: true
         });

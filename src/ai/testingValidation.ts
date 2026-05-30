@@ -41,7 +41,7 @@ export async function generateUnitTests(
 ): Promise<string | undefined> {
     const apiKey = getOpenAIKey();
     if (!apiKey?.trim()) {
-        vscode.window.showErrorMessage('SmartDevIDE: No API key. Set smartdevide.models.openai.apiKey.');
+        vscode.window.showErrorMessage('Smart Dev IDE: No API key. Set smartdevide.models.openai.apiKey.');
         return undefined;
     }
     let modelId = getModelId();
@@ -59,7 +59,7 @@ export async function generateUnitTests(
     try {
         const result = await completeChat(apiKey, modelId, messages, 4096);
         if (result.error || !result.content?.trim()) {
-            vscode.window.showErrorMessage(`SmartDevIDE: ${result.error || 'No tests generated'}`);
+            vscode.window.showErrorMessage(`Smart Dev IDE: ${result.error || 'No tests generated'}`);
             if (result.error) outputChannel.appendLine(`[Testing] ${result.error}`);
             return undefined;
         }
@@ -67,7 +67,7 @@ export async function generateUnitTests(
     } catch (err) {
         const msg = err instanceof Error ? err.message : String(err);
         outputChannel.appendLine(`[Testing] ${msg}`);
-        vscode.window.showErrorMessage(`SmartDevIDE: ${msg}`);
+        vscode.window.showErrorMessage(`Smart Dev IDE: ${msg}`);
         return undefined;
     }
 }
@@ -83,7 +83,7 @@ export async function generateEdgeCases(
 ): Promise<string | undefined> {
     const apiKey = getOpenAIKey();
     if (!apiKey?.trim()) {
-        vscode.window.showErrorMessage('SmartDevIDE: No API key. Set smartdevide.models.openai.apiKey.');
+        vscode.window.showErrorMessage('Smart Dev IDE: No API key. Set smartdevide.models.openai.apiKey.');
         return undefined;
     }
     let modelId = getModelId();
@@ -101,7 +101,7 @@ export async function generateEdgeCases(
     try {
         const result = await completeChat(apiKey, modelId, messages, 4096);
         if (result.error || !result.content?.trim()) {
-            vscode.window.showErrorMessage(`SmartDevIDE: ${result.error || 'No edge-case tests generated'}`);
+            vscode.window.showErrorMessage(`Smart Dev IDE: ${result.error || 'No edge-case tests generated'}`);
             if (result.error) outputChannel.appendLine(`[Testing] ${result.error}`);
             return undefined;
         }
@@ -109,7 +109,7 @@ export async function generateEdgeCases(
     } catch (err) {
         const msg = err instanceof Error ? err.message : String(err);
         outputChannel.appendLine(`[Testing] ${msg}`);
-        vscode.window.showErrorMessage(`SmartDevIDE: ${msg}`);
+        vscode.window.showErrorMessage(`Smart Dev IDE: ${msg}`);
         return undefined;
     }
 }
@@ -125,7 +125,7 @@ export async function flagUntestedOrRisky(
 ): Promise<void> {
     const apiKey = getOpenAIKey();
     if (!apiKey?.trim()) {
-        vscode.window.showErrorMessage('SmartDevIDE: No API key. Set smartdevide.models.openai.apiKey.');
+        vscode.window.showErrorMessage('Smart Dev IDE: No API key. Set smartdevide.models.openai.apiKey.');
         return;
     }
     let modelId = getModelId();
@@ -143,17 +143,17 @@ export async function flagUntestedOrRisky(
     try {
         const result = await completeChat(apiKey, modelId, messages, 1024);
         if (result.error || !result.content?.trim()) {
-            vscode.window.showErrorMessage(`SmartDevIDE: ${result.error || 'No analysis returned'}`);
+            vscode.window.showErrorMessage(`Smart Dev IDE: ${result.error || 'No analysis returned'}`);
             if (result.error) outputChannel.appendLine(`[Testing] ${result.error}`);
             return;
         }
-        const report = `# SmartDevIDE: Untested / Risky Logic\n\n**File:** ${document.fileName}\n**Language:** ${languageId}\n\n---\n\n${result.content.trim()}`;
+        const report = `# Smart Dev IDE: Untested / Risky Logic\n\n**File:** ${document.fileName}\n**Language:** ${languageId}\n\n---\n\n${result.content.trim()}`;
         const doc = await vscode.workspace.openTextDocument({ content: report, language: 'markdown' });
         await vscode.window.showTextDocument(doc, { preview: false, viewColumn: vscode.ViewColumn.Beside });
     } catch (err) {
         const msg = err instanceof Error ? err.message : String(err);
         outputChannel.appendLine(`[Testing] ${msg}`);
-        vscode.window.showErrorMessage(`SmartDevIDE: ${msg}`);
+        vscode.window.showErrorMessage(`Smart Dev IDE: ${msg}`);
     }
 }
 
@@ -233,11 +233,11 @@ export async function runStaticChecks(
 export function showStaticCheckResults(results: StaticCheckResult[], outputChannel: vscode.OutputChannel): void {
     const failed = results.filter(r => !r.ok);
     if (failed.length === 0) {
-        vscode.window.showInformationMessage(`SmartDevIDE: Static checks passed (${results.map(r => r.tool).join(', ')}).`);
+        vscode.window.showInformationMessage(`Smart Dev IDE: Static checks passed (${results.map(r => r.tool).join(', ')}).`);
         return;
     }
     const msg = failed.map(r => `${r.tool}: ${(r.error || r.output).split('\n')[0]}`).join('; ');
-    vscode.window.showWarningMessage(`SmartDevIDE: Static check issues: ${msg}`, 'Show Output').then(choice => {
+    vscode.window.showWarningMessage(`Smart Dev IDE: Static check issues: ${msg}`, 'Show Output').then(choice => {
         if (choice === 'Show Output') {
             outputChannel.show();
         }

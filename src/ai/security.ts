@@ -1,5 +1,5 @@
 /**
- * Security-first defaults and security review for SmartDevIDE.
+ * Security-first defaults and security review for Smart Dev IDE.
  */
 
 /** Instruction block to prefer secure defaults in all generated code. */

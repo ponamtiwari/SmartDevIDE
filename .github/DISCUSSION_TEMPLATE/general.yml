@@ -1,5 +1,5 @@
 # Template shown when creating a new discussion in the General category
-# at https://github.com/poonamtiwari/smartdevide/discussions
+# at https://github.com/ponamtiwari/SmartDevIDE/discussions
 # Category slug must match: create a "General" category when enabling Discussions
 title: "[General] "
 labels: []
@@ -7,8 +7,8 @@ body:
   - type: markdown
     attributes:
       value: |
-        Use this space for general questions, feedback, or chat about SmartDevIDE.
-        For **bugs** or **feature requests**, please open an [Issue](https://github.com/poonamtiwari/smartdevide/issues).
+        Use this space for general questions, feedback, or chat about Smart Dev IDE.
+        For **bugs** or **feature requests**, please open an [Issue](https://github.com/ponamtiwari/SmartDevIDE/issues).
   - type: textarea
     id: body
     attributes:

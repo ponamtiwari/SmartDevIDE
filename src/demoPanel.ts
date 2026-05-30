@@ -44,7 +44,7 @@ export class DemoPanel {
 
         const panel = vscode.window.createWebviewPanel(
             'behaviouraiDemo',
-            'BehaviourAI Demo',
+            'Smart Dev IDE Demo',
             column,
             {
                 enableScripts: true,
@@ -106,7 +106,7 @@ export class DemoPanel {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BehaviourAI Demo</title>
+    <title>Smart Dev IDE Demo</title>
     <style>
         * {
             margin: 0;
@@ -252,7 +252,7 @@ export class DemoPanel {
 <body>
     <div class="container">
         <div class="header">
-            <h1>🎯 BehaviourAI Demo</h1>
+            <h1>🎯 Smart Dev IDE Demo</h1>
             <p class="subtitle">Same command. Different outputs. Based on role, not prompts.</p>
         </div>
 

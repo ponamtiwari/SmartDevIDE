@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Push wiki content from wiki/*.md to the GitHub Wiki so it displays at
-# https://github.com/poonamtiwari/smartdevide/wiki
+# https://github.com/ponamtiwari/SmartDevIDE/wiki
 #
 # Prerequisites:
 # 1. Enable Wiki on the repo (Settings → Features → Wiki).
@@ -10,7 +10,7 @@
 # Usage: run from the repo root (IDE Extension): ./scripts/publish-wiki-to-github.sh
 
 set -e
-REPO="poonamtiwari/smartdevide"
+REPO="ponamtiwari/SmartDevIDE"
 WIKI_REPO="https://github.com/${REPO}.wiki.git"
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"

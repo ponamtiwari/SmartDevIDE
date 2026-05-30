@@ -1,4 +1,4 @@
-# SmartDevIDE - Enhanced Architecture
+# Smart Dev IDE - Enhanced Architecture
 
 ## 🎯 Vision
 Enterprise-grade, cross-IDE AI assistant with role-based behavior, multi-model support, and intelligent prompt enhancement.

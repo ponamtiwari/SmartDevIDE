@@ -39,7 +39,7 @@ export class RoleManager {
 
         const selected = await vscode.window.showQuickPick(items, {
             placeHolder: 'Select your developer role',
-            title: 'SmartDevIDE - Role Selection',
+            title: 'Smart Dev IDE - Role Selection',
             matchOnDescription: true,
             matchOnDetail: true
         });

@@ -1,9 +1,9 @@
 {
   "name": "smartdevide",
-  "displayName": "SmartDevIDE",
+  "displayName": "Smart Dev IDE",
   "description": "Enhanced AI coding assistant with role-based behavior, multi-model support, and intelligent prompt enhancement. Created by Poonam Tiwari.",
   "version": "1.0.0",
-  "publisher": "poonamtiwari",
+  "publisher": "ponamtiwari",
   "author": "Poonam Tiwari",
   "engines": {
     "vscode": "^1.75.0"
@@ -42,83 +42,83 @@
     "commands": [
       {
         "command": "smartdevide.selectRole",
-        "title": "SmartDevIDE: Select Role",
-        "category": "SmartDevIDE"
+        "title": "Smart Dev IDE: Select Role",
+        "category": "Smart Dev IDE"
       },
       {
         "command": "smartdevide.selectModel",
-        "title": "SmartDevIDE: Select Model",
-        "category": "SmartDevIDE"
+        "title": "Smart Dev IDE: Select Model",
+        "category": "Smart Dev IDE"
       },
       {
         "command": "smartdevide.autoDetectRole",
-        "title": "SmartDevIDE: Auto-Detect Role",
-        "category": "SmartDevIDE"
+        "title": "Smart Dev IDE: Auto-Detect Role",
+        "category": "Smart Dev IDE"
       },
       {
         "command": "smartdevide.generateCode",
-        "title": "SmartDevIDE: Generate Code",
-        "category": "SmartDevIDE"
+        "title": "Smart Dev IDE: Generate Code",
+        "category": "Smart Dev IDE"
       },
       {
         "command": "smartdevide.openDemo",
-        "title": "SmartDevIDE: Open Demo",
-        "category": "SmartDevIDE"
+        "title": "Smart Dev IDE: Open Demo",
+        "category": "Smart Dev IDE"
       },
       {
         "command": "smartdevide.generateSolution",
-        "title": "SmartDevIDE: Generate Solution",
-        "category": "SmartDevIDE"
+        "title": "Smart Dev IDE: Generate Solution",
+        "category": "Smart Dev IDE"
       },
       {
         "command": "smartdevide.enhancePrompt",
-        "title": "SmartDevIDE: Enhance Prompt",
-        "category": "SmartDevIDE"
+        "title": "Smart Dev IDE: Enhance Prompt",
+        "category": "Smart Dev IDE"
       },
       {
         "command": "smartdevide.openSettings",
-        "title": "SmartDevIDE: Open Settings",
-        "category": "SmartDevIDE"
+        "title": "Smart Dev IDE: Open Settings",
+        "category": "Smart Dev IDE"
       },
       {
         "command": "smartdevide.showInfo",
-        "title": "SmartDevIDE: Show Status Info",
-        "category": "SmartDevIDE"
+        "title": "Smart Dev IDE: Show Status Info",
+        "category": "Smart Dev IDE"
       },
       {
         "command": "smartdevide.fixWithAI",
-        "title": "SmartDevIDE: Fix with AI",
-        "category": "SmartDevIDE"
+        "title": "Smart Dev IDE: Fix with AI",
+        "category": "Smart Dev IDE"
       },
       {
         "command": "smartdevide.explainWithAI",
-        "title": "SmartDevIDE: Explain",
-        "category": "SmartDevIDE"
+        "title": "Smart Dev IDE: Explain",
+        "category": "Smart Dev IDE"
       },
       {
         "command": "smartdevide.securityReview",
-        "title": "SmartDevIDE: Security Review",
-        "category": "SmartDevIDE"
+        "title": "Smart Dev IDE: Security Review",
+        "category": "Smart Dev IDE"
       },
       {
         "command": "smartdevide.generateUnitTests",
-        "title": "SmartDevIDE: Generate Unit Tests",
-        "category": "SmartDevIDE"
+        "title": "Smart Dev IDE: Generate Unit Tests",
+        "category": "Smart Dev IDE"
       },
       {
         "command": "smartdevide.generateEdgeCases",
-        "title": "SmartDevIDE: Generate Edge Cases",
-        "category": "SmartDevIDE"
+        "title": "Smart Dev IDE: Generate Edge Cases",
+        "category": "Smart Dev IDE"
       },
       {
         "command": "smartdevide.runStaticChecks",
-        "title": "SmartDevIDE: Run Static Checks",
-        "category": "SmartDevIDE"
+        "title": "Smart Dev IDE: Run Static Checks",
+        "category": "Smart Dev IDE"
       },
       {
         "command": "smartdevide.flagUntestedRisky",
-        "title": "SmartDevIDE: Flag Untested / Risky Logic",
-        "category": "SmartDevIDE"
+        "title": "Smart Dev IDE: Flag Untested / Risky Logic",
+        "category": "Smart Dev IDE"
       }
     ],
     "keybindings": [
@@ -232,37 +232,37 @@
         {
           "command": "smartdevide.generateCode",
           "when": "editorTextFocus",
-          "group": "SmartDevIDE"
+          "group": "Smart Dev IDE"
         },
         {
           "command": "smartdevide.securityReview",
           "when": "editorTextFocus",
-          "group": "SmartDevIDE"
+          "group": "Smart Dev IDE"
         },
         {
           "command": "smartdevide.generateUnitTests",
           "when": "editorTextFocus",
-          "group": "SmartDevIDE"
+          "group": "Smart Dev IDE"
         },
         {
           "command": "smartdevide.generateEdgeCases",
           "when": "editorTextFocus",
-          "group": "SmartDevIDE"
+          "group": "Smart Dev IDE"
         },
         {
           "command": "smartdevide.runStaticChecks",
           "when": "editorTextFocus",
-          "group": "SmartDevIDE"
+          "group": "Smart Dev IDE"
         },
         {
           "command": "smartdevide.flagUntestedRisky",
           "when": "editorTextFocus",
-          "group": "SmartDevIDE"
+          "group": "Smart Dev IDE"
         }
       ]
     },
     "configuration": {
-      "title": "SmartDevIDE",
+      "title": "Smart Dev IDE",
       "properties": {
         "smartdevide.defaultRole": {
           "type": "string",
@@ -443,7 +443,7 @@
         "smartdevide.inlineCompletion.debug": {
           "type": "boolean",
           "default": false,
-          "description": "Log inline suggestion activity to Output (SmartDevIDE) for troubleshooting"
+          "description": "Log inline suggestion activity to Output (Smart Dev IDE) for troubleshooting"
         },
         "smartdevide.projectStyle.enabled": {
           "type": "boolean",
@@ -479,7 +479,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/poonamtiwari/smartdevide"
+    "url": "https://github.com/ponamtiwari/SmartDevIDE"
   },
   "license": "MIT"
 }

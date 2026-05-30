@@ -1,11 +1,11 @@
-# SmartDevIDE - Enhanced AI Coding Assistant
+# Smart Dev IDE - Enhanced AI Coding Assistant
 
 **Created by Poonam Tiwari** · Release **v1.0**
 
 > Enterprise-grade AI coding assistant with role-based behavior, multi-model support, and intelligent prompt enhancement for VS Code and Cursor.
 
-[![Version](https://img.shields.io/badge/version-1.0-blue.svg)](https://github.com/poonamtiwari/smartdevide)
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/poonamtiwari/smartdevide/blob/HEAD/LICENSE)
+[![Version](https://img.shields.io/badge/version-1.0-blue.svg)](https://github.com/ponamtiwari/SmartDevIDE)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/ponamtiwari/SmartDevIDE/blob/HEAD/LICENSE)
 
 ## 🌟 Key Features
 
@@ -32,12 +32,12 @@ Choose from multiple AI providers and models:
 
 ### ✨ AI Auto-Suggestions & Quick Fix
 - **Inline completions** – Ghost-text suggestions as you type, using your API key (or the extension default).
-- **Fix with AI** – On any error/warning, use the lightbulb (Quick Fix) → **SmartDevIDE: Fix with AI** to apply an AI-suggested fix.
-- **Explain** – Quick Fix → **SmartDevIDE: Explain** to get an AI explanation of the issue and how to fix it.
+- **Fix with AI** – On any error/warning, use the lightbulb (Quick Fix) → **Smart Dev IDE: Fix with AI** to apply an AI-suggested fix.
+- **Explain** – Quick Fix → **Smart Dev IDE: Explain** to get an AI explanation of the issue and how to fix it.
 
 ### 🔒 Security-First by Design
 - **Secure defaults in generated code** – All suggestions (inline, Generate Code, Fix with AI) are instructed to: use parameterized queries / prepared statements (no SQL concatenation), secure auth (e.g. password_hash, bcrypt, CSRF), and never output hardcoded secrets or API keys.
-- **Security Review mode** – Run **SmartDevIDE: Security Review** (Command Palette or right-click → SmartDevIDE) on the current file or selection. The AI reviews the code for:
+- **Security Review mode** – Run **Smart Dev IDE: Security Review** (Command Palette or right-click → Smart Dev IDE) on the current file or selection. The AI reviews the code for:
   - **SQL injection** – User input in raw SQL; recommends prepared statements.
   - **Insecure auth** – Weak or plain-text password handling; recommends password_hash/bcrypt, CSRF.
   - **Hardcoded secrets** – API keys, passwords in source; recommends env vars.
@@ -46,14 +46,14 @@ Choose from multiple AI providers and models:
 
 ### 🎯 More Accurate & Relevant Suggestions
 - **Less hallucination** – Prompts instruct the model to use only real, documented APIs (no made-up methods or classes). Prefer short, precise suggestions over long risky blocks.
-- **Safe / Minimal / Verbose modes** – **SmartDevIDE › Suggestion Mode**:
+- **Safe / Minimal / Verbose modes** – **Smart Dev IDE › Suggestion Mode**:
   - **safe** (default) – Only well-documented, standard APIs; minimal code; no speculative methods.
   - **minimal** – Shortest possible suggestion (1 line when possible).
   - **verbose** – May suggest longer blocks when clearly correct; still no invented APIs.
-- **Reasoning hint** – **SmartDevIDE › Suggestion Reasoning Hint**: when enabled, suggestions can include a short comment (e.g. `// uses Array.map`) so you see the approach or API used, as a confidence/relevance hint.
+- **Reasoning hint** – **Smart Dev IDE › Suggestion Reasoning Hint**: when enabled, suggestions can include a short comment (e.g. `// uses Array.map`) so you see the approach or API used, as a confidence/relevance hint.
 
 ### 📐 Auto-Learn Project Style (Never Fight the Style Guide)
-SmartDevIDE reads your project’s tooling and structure so generated code respects coding standards and never fights the project's style guide:
+Smart Dev IDE reads your project’s tooling and structure so generated code respects coding standards and never fights the project's style guide:
 
 - **Prettier** – Reads `.prettierrc`, `.prettierrc.json`, `.prettierrc.yaml`, `prettier.config.*`, or `package.json` → tabWidth, useTabs, quotes, semicolons, printWidth, trailingComma, arrowParens
 - **ESLint** – Reads `.eslintrc`, `.eslintrc.*`, `eslint.config.js` → indent, quotes, semi rules (and extends); generated code must comply when present
@@ -70,7 +70,7 @@ Suggestions use **whole-project context**, not just the current file:
 - **Respect existing patterns** – The AI is instructed to respect existing patterns, naming, and architecture and to match conventions used elsewhere in the project.
 - **Avoid breaking flows** – Explicit instruction: do not suggest code that breaks existing flows, duplicates logic, or contradicts patterns already in the project.
 
-Controlled by **SmartDevIDE › Project Style: Enabled** (on by default). Inline completion, Fix with AI, Explain, and Generate Code all use both style and whole-project context.
+Controlled by **Smart Dev IDE › Project Style: Enabled** (on by default). Inline completion, Fix with AI, Explain, and Generate Code all use both style and whole-project context.
 
 ### 🎯 Intelligent Prompt Enhancement
 Automatically enhance prompts without changing your input:
@@ -82,12 +82,12 @@ Automatically enhance prompts without changing your input:
 - **Best Practices** - Industry-standard coding guidelines
 
 ### 🧪 Built-in Testing & Validation
-SmartDevIDE helps you test and validate code before or after generation:
+Smart Dev IDE helps you test and validate code before or after generation:
 
-- **Generate unit tests with code** – After **Generate Code**, or from the Command Palette / editor context menu: **SmartDevIDE: Generate Unit Tests**. Generates focused unit tests for the current file or selection using the project’s test framework (Jest, Vitest, PHPUnit, pytest, etc.) when detectable.
-- **Generate edge cases** – **SmartDevIDE: Generate Edge Cases** produces tests for boundaries (empty, null, zero, max length), invalid input, and error paths. Available after Generate Code or from the menu.
-- **Run static checks before suggesting final code** – **SmartDevIDE: Run Static Checks** runs ESLint (JS/TS/Vue), TypeScript `tsc --noEmit`, or PHP `php -l` on the current file when those tools exist in the workspace. Use it after inserting generated code to catch lint/type/syntax issues. Results appear in the SmartDevIDE output channel and in a short notification.
-- **Flag untested or risky logic** – **SmartDevIDE: Flag Untested / Risky Logic** uses the AI to analyze the current file or selection and report: hard-to-test logic, risky patterns (null/undefined, missing error handling), missing edge-case handling, and fragile code. Output is a markdown report in a side panel.
+- **Generate unit tests with code** – After **Generate Code**, or from the Command Palette / editor context menu: **Smart Dev IDE: Generate Unit Tests**. Generates focused unit tests for the current file or selection using the project’s test framework (Jest, Vitest, PHPUnit, pytest, etc.) when detectable.
+- **Generate edge cases** – **Smart Dev IDE: Generate Edge Cases** produces tests for boundaries (empty, null, zero, max length), invalid input, and error paths. Available after Generate Code or from the menu.
+- **Run static checks before suggesting final code** – **Smart Dev IDE: Run Static Checks** runs ESLint (JS/TS/Vue), TypeScript `tsc --noEmit`, or PHP `php -l` on the current file when those tools exist in the workspace. Use it after inserting generated code to catch lint/type/syntax issues. Results appear in the Smart Dev IDE output channel and in a short notification.
+- **Flag untested or risky logic** – **Smart Dev IDE: Flag Untested / Risky Logic** uses the AI to analyze the current file or selection and report: hard-to-test logic, risky patterns (null/undefined, missing error handling), missing edge-case handling, and fragile code. Output is a markdown report in a side panel.
 
 After **Generate Code** completes, a quick pick offers: *Generate unit tests*, *Generate edge cases*, *Run static checks*, or *Flag untested/risky logic* so you can validate in one click.
 
@@ -108,20 +108,20 @@ Works seamlessly in both:
 ### From Marketplace (Coming Soon)
 1. Open VS Code or Cursor
 2. Go to Extensions (`Ctrl+Shift+X`)
-3. Search for "SmartDevIDE"
+3. Search for "Smart Dev IDE"
 4. Click Install
 
 ## 🚀 Quick Start
 
 ### 1. Select Your Role
 ```
-Ctrl+Shift+P → SmartDevIDE: Select Role
+Ctrl+Shift+P → Smart Dev IDE: Select Role
 ```
 Or click the role indicator in the status bar (🔧 Backend Developer)
 
 ### 2. Configure AI Model
 ```
-Ctrl+Shift+P → SmartDevIDE: Select Model
+Ctrl+Shift+P → Smart Dev IDE: Select Model
 ```
 
 #### OpenAI Setup
@@ -147,26 +147,26 @@ The extension enhances your AI interactions based on:
 
 ## 📋 Commands Reference
 
-All commands are available via the **Command Palette**: `Ctrl+Shift+P` (Windows/Linux) or `Cmd+Shift+P` (Mac). Type **SmartDevIDE** to filter.
+All commands are available via the **Command Palette**: `Ctrl+Shift+P` (Windows/Linux) or `Cmd+Shift+P` (Mac). Type **Smart Dev IDE** to filter.
 
 | Command | Description | Shortcut (Mac) | Shortcut (Win/Linux) |
 |--------|-------------|----------------|----------------------|
-| **SmartDevIDE: Select Role** | Choose your developer role (Backend, Laravel, React, QA, etc.). Shown in status bar. | `Cmd+Alt+R` | `Ctrl+Alt+R` |
-| **SmartDevIDE: Select Model** | Choose the AI model (e.g. GPT-4 Turbo, Claude). Shown in status bar. | `Cmd+Alt+M` | `Ctrl+Alt+M` |
-| **SmartDevIDE: Generate Code** | Generate code with AI using the current role and model. Inserts or replaces in editor. | `Cmd+Shift+G` | `Ctrl+Shift+G` |
-| **SmartDevIDE: Auto-Detect Role** | Suggest role based on the current file type. | `Cmd+Alt+D` | `Ctrl+Alt+D` |
-| **SmartDevIDE: Open Demo** | Open the demo panel with role-based code examples. | `Cmd+Alt+O` | `Ctrl+Alt+O` |
-| **SmartDevIDE: Generate Solution** | Quick access to the demo panel. | `Cmd+Alt+S` | `Ctrl+Alt+S` |
-| **SmartDevIDE: Enhance Prompt** | Enter a prompt and see the enhanced version (context + role). | `Cmd+Alt+E` | `Ctrl+Alt+E` |
-| **SmartDevIDE: Open Settings** | Open SmartDevIDE settings. | `Cmd+Alt+,` | `Ctrl+Alt+,` |
-| **SmartDevIDE: Show Status Info** | Show current role, model, and commands in a document. | `Cmd+Alt+I` | `Ctrl+Alt+I` |
-| **SmartDevIDE: Fix with AI** | Apply an AI-suggested fix (Quick Fix / lightbulb on error or warning). | `Cmd+Alt+F` | `Ctrl+Alt+F` |
-| **SmartDevIDE: Explain** | Get AI explanation of the issue and how to fix it (Quick Fix menu). | `Cmd+Alt+X` | `Ctrl+Alt+X` |
-| **SmartDevIDE: Security Review** | Review file or selection for SQL injection, secrets, insecure auth. | `Cmd+Alt+Y` | `Ctrl+Alt+Y` |
-| **SmartDevIDE: Generate Unit Tests** | Generate unit tests for current file or selection. | `Cmd+Alt+T` | `Ctrl+Alt+T` |
-| **SmartDevIDE: Generate Edge Cases** | Generate tests for boundaries, invalid input, error paths. | `Cmd+Alt+U` | `Ctrl+Alt+U` |
-| **SmartDevIDE: Run Static Checks** | Run ESLint, tsc --noEmit, or php -l on current file. | `Cmd+Alt+C` | `Ctrl+Alt+C` |
-| **SmartDevIDE: Flag Untested / Risky Logic** | AI report on hard-to-test or risky patterns. | `Cmd+Alt+K` | `Ctrl+Alt+K` |
+| **Smart Dev IDE: Select Role** | Choose your developer role (Backend, Laravel, React, QA, etc.). Shown in status bar. | `Cmd+Alt+R` | `Ctrl+Alt+R` |
+| **Smart Dev IDE: Select Model** | Choose the AI model (e.g. GPT-4 Turbo, Claude). Shown in status bar. | `Cmd+Alt+M` | `Ctrl+Alt+M` |
+| **Smart Dev IDE: Generate Code** | Generate code with AI using the current role and model. Inserts or replaces in editor. | `Cmd+Shift+G` | `Ctrl+Shift+G` |
+| **Smart Dev IDE: Auto-Detect Role** | Suggest role based on the current file type. | `Cmd+Alt+D` | `Ctrl+Alt+D` |
+| **Smart Dev IDE: Open Demo** | Open the demo panel with role-based code examples. | `Cmd+Alt+O` | `Ctrl+Alt+O` |
+| **Smart Dev IDE: Generate Solution** | Quick access to the demo panel. | `Cmd+Alt+S` | `Ctrl+Alt+S` |
+| **Smart Dev IDE: Enhance Prompt** | Enter a prompt and see the enhanced version (context + role). | `Cmd+Alt+E` | `Ctrl+Alt+E` |
+| **Smart Dev IDE: Open Settings** | Open Smart Dev IDE settings. | `Cmd+Alt+,` | `Ctrl+Alt+,` |
+| **Smart Dev IDE: Show Status Info** | Show current role, model, and commands in a document. | `Cmd+Alt+I` | `Ctrl+Alt+I` |
+| **Smart Dev IDE: Fix with AI** | Apply an AI-suggested fix (Quick Fix / lightbulb on error or warning). | `Cmd+Alt+F` | `Ctrl+Alt+F` |
+| **Smart Dev IDE: Explain** | Get AI explanation of the issue and how to fix it (Quick Fix menu). | `Cmd+Alt+X` | `Ctrl+Alt+X` |
+| **Smart Dev IDE: Security Review** | Review file or selection for SQL injection, secrets, insecure auth. | `Cmd+Alt+Y` | `Ctrl+Alt+Y` |
+| **Smart Dev IDE: Generate Unit Tests** | Generate unit tests for current file or selection. | `Cmd+Alt+T` | `Ctrl+Alt+T` |
+| **Smart Dev IDE: Generate Edge Cases** | Generate tests for boundaries, invalid input, error paths. | `Cmd+Alt+U` | `Ctrl+Alt+U` |
+| **Smart Dev IDE: Run Static Checks** | Run ESLint, tsc --noEmit, or php -l on current file. | `Cmd+Alt+C` | `Ctrl+Alt+C` |
+| **Smart Dev IDE: Flag Untested / Risky Logic** | AI report on hard-to-test or risky patterns. | `Cmd+Alt+K` | `Ctrl+Alt+K` |
 
 ## ⚙️ Configuration
 
@@ -338,14 +338,14 @@ MIT License - see [LICENSE](LICENSE) file
 
 ## 🔗 Links
 
-- [GitHub Repository](https://github.com/poonamtiwari/smartdevide)
-- [Issue Tracker](https://github.com/poonamtiwari/smartdevide/issues)
-- [Documentation](https://github.com/poonamtiwari/smartdevide/wiki)
+- [GitHub Repository](https://github.com/ponamtiwari/SmartDevIDE)
+- [Issue Tracker](https://github.com/ponamtiwari/SmartDevIDE/issues)
+- [Documentation](https://github.com/ponamtiwari/SmartDevIDE/wiki)
 
 ## 💬 Support
 
-- **Issues**: [GitHub Issues](https://github.com/poonamtiwari/smartdevide/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/poonamtiwari/smartdevide/discussions)
+- **Issues**: [GitHub Issues](https://github.com/ponamtiwari/SmartDevIDE/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/ponamtiwari/SmartDevIDE/discussions)
 
 ---
 

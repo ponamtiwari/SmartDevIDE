@@ -1,5 +1,5 @@
 /**
- * OpenAI API client for SmartDevIDE code generation.
+ * OpenAI API client for Smart Dev IDE code generation.
  * Uses workspace API key from smartdevide.models.openai.apiKey.
  */
 

@@ -22,10 +22,10 @@ let promptEnhancer: PromptEnhancer;
 let outputChannel: vscode.OutputChannel;
 
 export function activate(context: vscode.ExtensionContext) {
-    outputChannel = vscode.window.createOutputChannel('SmartDevIDE');
+    outputChannel = vscode.window.createOutputChannel('Smart Dev IDE');
     try {
-        outputChannel.appendLine('SmartDevIDE activating...');
-        console.log('SmartDevIDE extension is now active!');
+        outputChannel.appendLine('Smart Dev IDE activating...');
+        console.log('Smart Dev IDE extension is now active!');
 
         // Initialize core managers
         roleManager = new RoleManager(context);
@@ -103,7 +103,7 @@ export function activate(context: vscode.ExtensionContext) {
 
             if (modelDetails?.provider !== 'openai') {
                 vscode.window.showWarningMessage(
-                    'SmartDevIDE Generate Code currently uses OpenAI. Set your model to an OpenAI model (e.g. GPT-4 Turbo) and add your API key in Settings.',
+                    'Smart Dev IDE Generate Code currently uses OpenAI. Set your model to an OpenAI model (e.g. GPT-4 Turbo) and add your API key in Settings.',
                     'Open Settings'
                 ).then(choice => {
                     if (choice === 'Open Settings') {
@@ -127,7 +127,7 @@ export function activate(context: vscode.ExtensionContext) {
             await vscode.window.withProgress(
                 {
                     location: vscode.ProgressLocation.Notification,
-                    title: `SmartDevIDE: Generating code (${role})...`,
+                    title: `Smart Dev IDE: Generating code (${role})...`,
                     cancellable: false
                 },
                 async () => {
@@ -136,11 +136,11 @@ export function activate(context: vscode.ExtensionContext) {
             );
 
             if (result!.error) {
-                vscode.window.showErrorMessage(`SmartDevIDE: ${result!.error}`);
+                vscode.window.showErrorMessage(`Smart Dev IDE: ${result!.error}`);
                 return;
             }
             if (!result!.content) {
-                vscode.window.showWarningMessage('SmartDevIDE: No content generated.');
+                vscode.window.showWarningMessage('Smart Dev IDE: No content generated.');
                 return;
             }
 
@@ -154,7 +154,7 @@ export function activate(context: vscode.ExtensionContext) {
                         editBuilder.insert(targetEditor.selection.active, result!.content);
                     }
                 });
-                vscode.window.showInformationMessage(`SmartDevIDE: Code inserted (${modelDetails?.displayName || modelId}).`);
+                vscode.window.showInformationMessage(`Smart Dev IDE: Code inserted (${modelDetails?.displayName || modelId}).`);
                 // Offer testing & validation after generating code
                 const testingChoice = await vscode.window.showQuickPick(
                     [
@@ -288,7 +288,7 @@ export function activate(context: vscode.ExtensionContext) {
             const modelDetails = modelManager.getModelById(model);
 
             const info = [
-                '## SmartDevIDE Status',
+                '## Smart Dev IDE Status',
                 '',
                 `**Current Role:** ${roleMetadata?.icon} ${role}`,
                 `**Focus Areas:** ${roleMetadata?.focusAreas.join(', ')}`,
@@ -298,12 +298,12 @@ export function activate(context: vscode.ExtensionContext) {
                 `**Context Window:** ${modelDetails?.contextWindow.toLocaleString() || 'Unknown'} tokens`,
                 '',
                 '**Available Commands:**',
-                '- SmartDevIDE: Select Role',
-                '- SmartDevIDE: Select Model',
-                '- SmartDevIDE: Auto-Detect Role',
-                '- SmartDevIDE: Generate Code',
-                '- SmartDevIDE: Enhance Prompt',
-                '- SmartDevIDE: Open Demo'
+                '- Smart Dev IDE: Select Role',
+                '- Smart Dev IDE: Select Model',
+                '- Smart Dev IDE: Auto-Detect Role',
+                '- Smart Dev IDE: Generate Code',
+                '- Smart Dev IDE: Enhance Prompt',
+                '- Smart Dev IDE: Open Demo'
             ].join('\\n');
 
             vscode.workspace.openTextDocument({
@@ -342,7 +342,7 @@ export function activate(context: vscode.ExtensionContext) {
             inlineProvider
         )
     );
-    outputChannel.appendLine('SmartDevIDE: Inline completion (auto-suggest) registered.');
+    outputChannel.appendLine('Smart Dev IDE: Inline completion (auto-suggest) registered.');
 
     // Code actions: Fix with AI and Explain (Quick Fix menu on errors/warnings)
     const codeActionsProvider = new SmartDevCodeActionsProvider(
@@ -361,7 +361,7 @@ export function activate(context: vscode.ExtensionContext) {
         vscode.commands.registerCommand('smartdevide.fixWithAI', (args?: FixExplainArgs) => {
             const a = args ?? getArgsFromActiveEditor();
             if (!a) {
-                vscode.window.showWarningMessage('SmartDevIDE: Open a file and select code (or use Quick Fix on an error/warning).');
+                vscode.window.showWarningMessage('Smart Dev IDE: Open a file and select code (or use Quick Fix on an error/warning).');
                 return;
             }
             runFixWithAI(a, () => roleManager.getCurrentRole(), () => modelManager.getCurrentModel(), outputChannel);
@@ -371,7 +371,7 @@ export function activate(context: vscode.ExtensionContext) {
         vscode.commands.registerCommand('smartdevide.explainWithAI', (args?: FixExplainArgs) => {
             const a = args ?? getArgsFromActiveEditor('Explain the selected code');
             if (!a) {
-                vscode.window.showWarningMessage('SmartDevIDE: Open a file and select code (or use Quick Fix on an error/warning).');
+                vscode.window.showWarningMessage('Smart Dev IDE: Open a file and select code (or use Quick Fix on an error/warning).');
                 return;
             }
             runExplainWithAI(a, () => roleManager.getCurrentRole(), () => modelManager.getCurrentModel(), outputChannel);
@@ -381,7 +381,7 @@ export function activate(context: vscode.ExtensionContext) {
         vscode.commands.registerCommand('smartdevide.securityReview', async () => {
             const editor = vscode.window.activeTextEditor;
             if (!editor) {
-                vscode.window.showWarningMessage('SmartDevIDE: Open a file first, then run Security Review.');
+                vscode.window.showWarningMessage('Smart Dev IDE: Open a file first, then run Security Review.');
                 return;
             }
             const range = editor.selection.isEmpty ? undefined : editor.selection;
@@ -394,7 +394,7 @@ export function activate(context: vscode.ExtensionContext) {
         vscode.commands.registerCommand('smartdevide.generateUnitTests', async () => {
             const editor = vscode.window.activeTextEditor;
             if (!editor) {
-                vscode.window.showWarningMessage('SmartDevIDE: Open a file (or select code) first.');
+                vscode.window.showWarningMessage('Smart Dev IDE: Open a file (or select code) first.');
                 return;
             }
             const range = editor.selection.isEmpty ? undefined : editor.selection;
@@ -409,7 +409,7 @@ export function activate(context: vscode.ExtensionContext) {
         vscode.commands.registerCommand('smartdevide.generateEdgeCases', async () => {
             const editor = vscode.window.activeTextEditor;
             if (!editor) {
-                vscode.window.showWarningMessage('SmartDevIDE: Open a file (or select code) first.');
+                vscode.window.showWarningMessage('Smart Dev IDE: Open a file (or select code) first.');
                 return;
             }
             const range = editor.selection.isEmpty ? undefined : editor.selection;
@@ -424,12 +424,12 @@ export function activate(context: vscode.ExtensionContext) {
         vscode.commands.registerCommand('smartdevide.runStaticChecks', async () => {
             const editor = vscode.window.activeTextEditor;
             if (!editor) {
-                vscode.window.showWarningMessage('SmartDevIDE: Open a file first.');
+                vscode.window.showWarningMessage('Smart Dev IDE: Open a file first.');
                 return;
             }
             const workspaceRoot = getWorkspaceRootForDocument(editor.document);
             if (!workspaceRoot) {
-                vscode.window.showWarningMessage('SmartDevIDE: No workspace folder found.');
+                vscode.window.showWarningMessage('Smart Dev IDE: No workspace folder found.');
                 return;
             }
             const results = await runStaticChecks(workspaceRoot, editor.document, outputChannel);
@@ -440,7 +440,7 @@ export function activate(context: vscode.ExtensionContext) {
         vscode.commands.registerCommand('smartdevide.flagUntestedRisky', async () => {
             const editor = vscode.window.activeTextEditor;
             if (!editor) {
-                vscode.window.showWarningMessage('SmartDevIDE: Open a file (or select code) first.');
+                vscode.window.showWarningMessage('Smart Dev IDE: Open a file (or select code) first.');
                 return;
             }
             const range = editor.selection.isEmpty ? undefined : editor.selection;
@@ -467,7 +467,7 @@ export function activate(context: vscode.ExtensionContext) {
     const hasShownWelcome = context.globalState.get('smartdevide.hasShownWelcome');
     if (!hasShownWelcome) {
         vscode.window.showInformationMessage(
-            'Welcome to SmartDevIDE! Enhanced AI assistant with role-based behavior and multi-model support.',
+            'Welcome to Smart Dev IDE! Enhanced AI assistant with role-based behavior and multi-model support.',
             'Select Role',
             'Select Model',
             'Open Demo'
@@ -482,14 +482,14 @@ export function activate(context: vscode.ExtensionContext) {
         });
         context.globalState.update('smartdevide.hasShownWelcome', true);
     }
-        outputChannel.appendLine('SmartDevIDE activated successfully.');
+        outputChannel.appendLine('Smart Dev IDE activated successfully.');
     } catch (err) {
         const msg = err instanceof Error ? err.message : String(err);
         const stack = err instanceof Error ? err.stack : '';
         outputChannel.appendLine(`Activation error: ${msg}`);
         if (stack) { outputChannel.appendLine(stack); }
-        console.error('SmartDevIDE failed to activate:', err);
-        vscode.window.showErrorMessage(`SmartDevIDE failed to load: ${msg}. Open Output (View > Output) and select "SmartDevIDE" for details.`);
+        console.error('Smart Dev IDE failed to activate:', err);
+        vscode.window.showErrorMessage(`Smart Dev IDE failed to load: ${msg}. Open Output (View > Output) and select "Smart Dev IDE" for details.`);
     }
 }
 

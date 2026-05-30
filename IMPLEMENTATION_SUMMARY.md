@@ -1,8 +1,8 @@
-# SmartDevIDE - Implementation Summary
+# Smart Dev IDE - Implementation Summary
 
 ## 🎯 Project Overview
 
-SmartDevIDE has been successfully transformed from a POC into a production-ready, enterprise-grade AI coding assistant with role-based behavior, multi-model support, and intelligent prompt enhancement for both VS Code and Cursor IDE.
+Smart Dev IDE has been successfully transformed from a POC into a production-ready, enterprise-grade AI coding assistant with role-based behavior, multi-model support, and intelligent prompt enhancement for both VS Code and Cursor IDE.
 
 ## ✅ Completed Features
 
@@ -88,7 +88,7 @@ SmartDevIDE has been successfully transformed from a POC into a production-ready
 
 - **Command Palette**:
   - 8 commands for all features
-  - Categorized under "SmartDevIDE"
+  - Categorized under "Smart Dev IDE"
   - Clear descriptions
 
 - **Quick Picks**:
@@ -375,7 +375,7 @@ code --install-extension smartdevide-2.0.1.vsix
 
 ## 🎉 Conclusion
 
-SmartDevIDE v2.0 is a **complete, production-ready AI coding assistant** that successfully addresses the requirements:
+Smart Dev IDE v2.0 is a **complete, production-ready AI coding assistant** that successfully addresses the requirements:
 
 ✅ **Role-Based Behavior**: 8 specialized developer roles
 ✅ **Multi-Model Support**: 4 providers, 8+ models
@@ -397,6 +397,6 @@ The extension is ready for:
 ---
 
 **Author: Poonam Tiwari**
-**Repository: https://github.com/poonamtiwari/smartdevide**
+**Repository: https://github.com/ponamtiwari/SmartDevIDE**
 **Version: 1.0.0**
 **Status: Complete & Production-Ready**

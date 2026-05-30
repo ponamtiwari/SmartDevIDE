@@ -1,4 +1,4 @@
-# SmartDevIDE Roadmap
+# Smart Dev IDE Roadmap
 
 Current status and planned improvements.
 
@@ -30,6 +30,6 @@ Current status and planned improvements.
 
 ## How to contribute
 
-- **Bugs / features:** [Open an issue](https://github.com/poonamtiwari/smartdevide/issues)  
-- **Ideas / questions:** Use [Discussions](https://github.com/poonamtiwari/smartdevide/discussions) (if enabled)  
+- **Bugs / features:** [Open an issue](https://github.com/ponamtiwari/SmartDevIDE/issues)  
+- **Ideas / questions:** Use [Discussions](https://github.com/ponamtiwari/SmartDevIDE/discussions) (if enabled)  
 - **Code:** Check README and CONTRIBUTING (if present) for how to build and run tests  

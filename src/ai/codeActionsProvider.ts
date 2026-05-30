@@ -7,8 +7,8 @@ import { SECURITY_PROMPT_BLOCK } from './security';
 import { DEFAULT_ROLES } from '../config/defaults';
 import { DeveloperRole } from '../types';
 
-const FIX_ACTION_TITLE = 'SmartDevIDE: Fix with AI';
-const EXPLAIN_ACTION_TITLE = 'SmartDevIDE: Explain';
+const FIX_ACTION_TITLE = 'Smart Dev IDE: Fix with AI';
+const EXPLAIN_ACTION_TITLE = 'Smart Dev IDE: Explain';
 
 const LINES_CONTEXT = 15;
 
@@ -110,7 +110,7 @@ export class SmartDevCodeActionsProvider implements vscode.CodeActionProvider {
             };
             actions.push(fixAction);
 
-            const explainAction = new vscode.CodeAction('SmartDevIDE: Explain', SmartDevCodeActionsProvider.explainKind);
+            const explainAction = new vscode.CodeAction('Smart Dev IDE: Explain', SmartDevCodeActionsProvider.explainKind);
             explainAction.diagnostics = [diagnostic];
             explainAction.command = {
                 command: 'smartdevide.explainWithAI',
@@ -131,7 +131,7 @@ export async function runFixWithAI(
 ): Promise<void> {
     const apiKey = getOpenAIKey();
     if (!apiKey?.trim()) {
-        vscode.window.showErrorMessage('SmartDevIDE: No API key. Set smartdevide.models.openai.apiKey or use the extension default.');
+        vscode.window.showErrorMessage('Smart Dev IDE: No API key. Set smartdevide.models.openai.apiKey or use the extension default.');
         return;
     }
     let modelId = getModelId();
@@ -166,7 +166,7 @@ Rules:
     try {
         const result = await completeChat(apiKey, modelId, messages, 1024);
         if (result.error || !result.content?.trim()) {
-            vscode.window.showErrorMessage(`SmartDevIDE: ${result.error || 'No fix returned'}`);
+            vscode.window.showErrorMessage(`Smart Dev IDE: ${result.error || 'No fix returned'}`);
             if (result.error) outputChannel.appendLine(`[Fix] ${result.error}`);
             return;
         }
@@ -192,16 +192,16 @@ Rules:
         if (editor && editor.document.uri.toString() === args.uri) {
             const doc = editor.document;
             if (range.start.line >= doc.lineCount || range.end.line >= doc.lineCount) {
-                vscode.window.showErrorMessage('SmartDevIDE: Fix could not be applied (document changed). Run Fix with AI again.');
+                vscode.window.showErrorMessage('Smart Dev IDE: Fix could not be applied (document changed). Run Fix with AI again.');
                 return;
             }
             const applied = await editor.edit(editBuilder => {
                 editBuilder.replace(range, text);
             });
             if (applied) {
-                vscode.window.showInformationMessage('SmartDevIDE: Fix applied.');
+                vscode.window.showInformationMessage('Smart Dev IDE: Fix applied.');
             } else {
-                vscode.window.showErrorMessage('SmartDevIDE: Could not apply fix. Run Fix with AI again or save the file first.');
+                vscode.window.showErrorMessage('Smart Dev IDE: Could not apply fix. Run Fix with AI again or save the file first.');
                 outputChannel.appendLine('[Fix] editor.edit returned false');
             }
             return;
@@ -213,15 +213,15 @@ Rules:
         workspaceEdit.replace(doc.uri, range, text);
         const applied = await vscode.workspace.applyEdit(workspaceEdit);
         if (applied) {
-            vscode.window.showInformationMessage('SmartDevIDE: Fix applied.');
+            vscode.window.showInformationMessage('Smart Dev IDE: Fix applied.');
         } else {
-            vscode.window.showErrorMessage('SmartDevIDE: Could not apply fix. Ensure the file is open and try again.');
+            vscode.window.showErrorMessage('Smart Dev IDE: Could not apply fix. Ensure the file is open and try again.');
             outputChannel.appendLine('[Fix] workspace.applyEdit returned false');
         }
     } catch (err) {
         const msg = err instanceof Error ? err.message : String(err);
         outputChannel.appendLine(`[Fix] ${msg}`);
-        vscode.window.showErrorMessage(`SmartDevIDE: ${msg}`);
+        vscode.window.showErrorMessage(`Smart Dev IDE: ${msg}`);
     }
 }
 
@@ -233,7 +233,7 @@ export async function runExplainWithAI(
 ): Promise<void> {
     const apiKey = getOpenAIKey();
     if (!apiKey?.trim()) {
-        vscode.window.showErrorMessage('SmartDevIDE: No API key. Set smartdevide.models.openai.apiKey or use the extension default.');
+        vscode.window.showErrorMessage('Smart Dev IDE: No API key. Set smartdevide.models.openai.apiKey or use the extension default.');
         return;
     }
     let modelId = getModelId();
@@ -258,18 +258,18 @@ Explain the issue and how to fix it in clear, concise language. Use markdown. Ta
     try {
         const result = await completeChat(apiKey, modelId, messages, 1024);
         if (result.error || !result.content?.trim()) {
-            vscode.window.showErrorMessage(`SmartDevIDE: ${result.error || 'No explanation returned'}`);
+            vscode.window.showErrorMessage(`Smart Dev IDE: ${result.error || 'No explanation returned'}`);
             if (result.error) outputChannel.appendLine(`[Explain] ${result.error}`);
             return;
         }
         const doc = await vscode.workspace.openTextDocument({
-            content: `# SmartDevIDE: Explanation\n\n${result.content.trim()}`,
+            content: `# Smart Dev IDE: Explanation\n\n${result.content.trim()}`,
             language: 'markdown'
         });
         await vscode.window.showTextDocument(doc, { preview: false, viewColumn: vscode.ViewColumn.Beside });
     } catch (err) {
         const msg = err instanceof Error ? err.message : String(err);
         outputChannel.appendLine(`[Explain] ${msg}`);
-        vscode.window.showErrorMessage(`SmartDevIDE: ${msg}`);
+        vscode.window.showErrorMessage(`Smart Dev IDE: ${msg}`);
     }
 }

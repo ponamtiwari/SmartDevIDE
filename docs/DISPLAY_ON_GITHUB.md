@@ -2,9 +2,9 @@
 
 This doc explains how the repo is set up so content **displays** at:
 
-- **Wiki:** https://github.com/poonamtiwari/smartdevide/wiki  
-- **Issues:** https://github.com/poonamtiwari/smartdevide/issues (template chooser when you click **New issue**)  
-- **Discussions:** https://github.com/poonamtiwari/smartdevide/discussions (after enabling; templates when you click **New discussion**)
+- **Wiki:** https://github.com/ponamtiwari/SmartDevIDE/wiki  
+- **Issues:** https://github.com/ponamtiwari/SmartDevIDE/issues (template chooser when you click **New issue**)  
+- **Discussions:** https://github.com/ponamtiwari/SmartDevIDE/discussions (after enabling; templates when you click **New discussion**)
 
 ---
 
@@ -19,7 +19,7 @@ This doc explains how the repo is set up so content **displays** at:
 
 **What you need to do:**  
 Commit and push the repo (including `.github/`) to the **default branch**.  
-Then at **https://github.com/poonamtiwari/smartdevide/issues** → **New issue**, GitHub will show a dropdown to pick one of these templates.
+Then at **https://github.com/ponamtiwari/SmartDevIDE/issues** → **New issue**, GitHub will show a dropdown to pick one of these templates.
 
 **Optional:** In the repo create labels `bug`, `enhancement`, `documentation` so the templates can auto-apply them.
 
@@ -40,7 +40,7 @@ Then at **https://github.com/poonamtiwari/smartdevide/issues** → **New issue**
    Discussions → **New category** → create e.g. **General** and **Ideas** (GitHub may create **General** by default; slug for Ideas is usually `ideas`).
 3. **Push the repo** so `.github/DISCUSSION_TEMPLATE/` is on the default branch.
 
-Then at **https://github.com/poonamtiwari/smartdevide/discussions** → **New discussion**, users can choose a category and see the form from the matching template.  
+Then at **https://github.com/ponamtiwari/SmartDevIDE/discussions** → **New discussion**, users can choose a category and see the form from the matching template.  
 The Discussions URL will work (no 404) once Discussions are enabled; it will be empty until someone creates a discussion.
 
 ---
@@ -55,17 +55,17 @@ GitHub’s Wiki is a **separate git repo** (`smartdevide.wiki`), so these files 
 
 1. **Enable Wiki:** Repo **Settings** → **Features** → check **Wiki**.
 2. **Create the first page once** in the browser so the wiki repo exists:  
-   Open https://github.com/poonamtiwari/smartdevide/wiki → **Create the first page** → e.g. title **Home**, paste `wiki/Home.md` → Save.
+   Open https://github.com/ponamtiwari/SmartDevIDE/wiki → **Create the first page** → e.g. title **Home**, paste `wiki/Home.md` → Save.
 3. **Push wiki content from the repo:** from the repo root run:
    ```bash
    ./scripts/publish-wiki-to-github.sh
    ```
    This clones `smartdevide.wiki`, copies `wiki/Home.md`, `Features.md`, `Installation.md`, `Roadmap.md` into it, and pushes.  
    After that, the Wiki URLs will display that content:
-   - https://github.com/poonamtiwari/smartdevide/wiki  
-   - https://github.com/poonamtiwari/smartdevide/wiki/Features  
-   - https://github.com/poonamtiwari/smartdevide/wiki/Installation  
-   - https://github.com/poonamtiwari/smartdevide/wiki/Roadmap  
+   - https://github.com/ponamtiwari/SmartDevIDE/wiki  
+   - https://github.com/ponamtiwari/SmartDevIDE/wiki/Features  
+   - https://github.com/ponamtiwari/SmartDevIDE/wiki/Installation  
+   - https://github.com/ponamtiwari/SmartDevIDE/wiki/Roadmap  
 
 Details are also in **wiki/README.md**.
 

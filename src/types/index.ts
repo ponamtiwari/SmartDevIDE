@@ -1,4 +1,4 @@
-// Core type definitions for SmartDevIDE
+// Core type definitions for Smart Dev IDE
 
 export enum DeveloperRole {
     BACKEND = 'Backend Developer',

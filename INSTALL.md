@@ -1,4 +1,4 @@
-# SmartDevIDE – Quick Installation Guide
+# Smart Dev IDE – Quick Installation Guide
 
 ## ✅ Extension Package
 
@@ -39,7 +39,7 @@ After installation:
 
 2. **Status Bar**: Bottom-right shows role (e.g. 🔧 Backend Developer) and model (e.g. 🤖 GPT-4 Turbo). Click either to change.
 
-3. **Run any command**: Press `Ctrl+Shift+P` (Windows/Linux) or `Cmd+Shift+P` (Mac), type **SmartDevIDE**, then pick a command (see **Available Commands** below).
+3. **Run any command**: Press `Ctrl+Shift+P` (Windows/Linux) or `Cmd+Shift+P` (Mac), type **Smart Dev IDE**, then pick a command (see **Available Commands** below).
 
 ## Testing the Extension
 
@@ -50,7 +50,7 @@ After installation:
 
 ### Test 2: Demo Panel
 1. Press `Ctrl+Shift+P`
-2. Type: "SmartDevIDE: Open Demo"
+2. Type: "Smart Dev IDE: Open Demo"
 3. In the demo panel:
    - Select "Generate user creation solution" from dropdown
    - See backend-focused code with transactions, caching, events
@@ -65,21 +65,21 @@ After installation:
 
 ## Available Commands
 
-**How to run:** `Ctrl+Shift+P` (Windows/Linux) or `Cmd+Shift+P` (Mac) → type **SmartDevIDE** → choose a command.
+**How to run:** `Ctrl+Shift+P` (Windows/Linux) or `Cmd+Shift+P` (Mac) → type **Smart Dev IDE** → choose a command.
 
 | Command | What it does |
 |--------|----------------|
-| **SmartDevIDE: Select Role** | Choose developer role (Backend, Laravel, React, QA, etc.) |
-| **SmartDevIDE: Select Model** | Choose AI model (e.g. GPT-4 Turbo) |
-| **SmartDevIDE: Generate Code** | Generate code with AI; inserts into editor. **Shortcut:** `Ctrl+Shift+G` / `Cmd+Shift+G` |
-| **SmartDevIDE: Auto-Detect Role** | Suggest role from current file type |
-| **SmartDevIDE: Open Demo** | Open demo panel with role-based examples |
-| **SmartDevIDE: Generate Solution** | Open demo panel (quick access) |
-| **SmartDevIDE: Enhance Prompt** | See how your prompt is enhanced with context and role |
-| **SmartDevIDE: Open Settings** | Open SmartDevIDE settings |
-| **SmartDevIDE: Show Status Info** | Show current role, model, and commands |
+| **Smart Dev IDE: Select Role** | Choose developer role (Backend, Laravel, React, QA, etc.) |
+| **Smart Dev IDE: Select Model** | Choose AI model (e.g. GPT-4 Turbo) |
+| **Smart Dev IDE: Generate Code** | Generate code with AI; inserts into editor. **Shortcut:** `Ctrl+Shift+G` / `Cmd+Shift+G` |
+| **Smart Dev IDE: Auto-Detect Role** | Suggest role from current file type |
+| **Smart Dev IDE: Open Demo** | Open demo panel with role-based examples |
+| **Smart Dev IDE: Generate Solution** | Open demo panel (quick access) |
+| **Smart Dev IDE: Enhance Prompt** | See how your prompt is enhanced with context and role |
+| **Smart Dev IDE: Open Settings** | Open Smart Dev IDE settings |
+| **Smart Dev IDE: Show Status Info** | Show current role, model, and commands |
 
-**Generate Code** can also be run by right-clicking in the editor → **SmartDevIDE** → **SmartDevIDE: Generate Code**.
+**Generate Code** can also be run by right-clicking in the editor → **Smart Dev IDE** → **Smart Dev IDE: Generate Code**.
 
 ## Roles Available
 
@@ -107,14 +107,14 @@ Each command produces completely different code based on your selected role!
 
 **Extension not showing up?**
 - Reload VS Code: `Ctrl+Shift+P` → "Reload Window"
-- Check Extensions panel: `Ctrl+Shift+X` → Search "SmartDevIDE"
+- Check Extensions panel: `Ctrl+Shift+X` → Search "Smart Dev IDE"
 
 **Commands not appearing?**
 - Make sure extension is activated (check status bar for 🎯)
 - Reload window if just installed
 
 **Want to uninstall?**
-- Extensions panel → SmartDevIDE → Uninstall
+- Extensions panel → Smart Dev IDE → Uninstall
 
 ## What's Next?
 
