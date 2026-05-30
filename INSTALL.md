@@ -1,5 +1,7 @@
 # Smart Dev IDE – Quick Installation Guide
 
+> **See also:** [docs/getting-started.md](docs/getting-started.md) — full installation guide.
+
 ## ✅ Extension Package
 
 **File**: `smartdevide-2.0.1.vsix`  

@@ -1,4 +1,6 @@
-# How to Generate Extension File (.vsix) for VS Code and Cursor
+# How to Build Smart Dev IDE (.vsix)
+
+> **See also:** [docs/development.md](docs/development.md) — full development guide.
 
 The **same .vsix file** works for both **VS Code** and **Cursor** (Cursor is built on VS Code and uses the same extension format).
 

@@ -1,74 +1,46 @@
 # Welcome to the Smart Dev IDE Wiki
 
-**Smart Dev IDE** (release **v1.0**) — created by **Poonam Tiwari**.
-
-Smart Dev IDE is an **enterprise-grade AI coding assistant** with role-based behavior, multi-model support, and intelligent prompt enhancement for **VS Code** and **Cursor**.
+**Smart Dev IDE** — AI coding assistant for VS Code and Cursor · **v1.0.0** · by **Poonam Tiwari**
 
 ---
 
-## What is Smart Dev IDE?
+## Official documentation
 
-Smart Dev IDE extends your editor with:
+Full documentation lives in the repository:
 
-- **8 developer roles** (Backend, Laravel, React, QA, Tech Lead, etc.) so the AI matches your job
-- **Multi-model support** (OpenAI, Anthropic, Google, Cursor)
-- **Inline AI suggestions** as you type
-- **Generate Code**, **Fix with AI**, and **Explain** from the Command Palette or context menu
-- **Security Review** – scan code for SQL injection, hardcoded secrets, insecure auth
-- **Testing & Validation** – generate unit tests, edge cases, run static checks, flag risky logic
-- **Project style auto-learn** – follows ESLint, Prettier, PHP-CS-Fixer and your folder structure so it never fights your style guide
-
----
-
-## Wiki pages
-
-| Page | Description |
-|------|-------------|
-| [Features](Features) | Full feature list and capabilities |
-| [Installation](Installation) | Install from VSIX in VS Code and Cursor |
-| [Roadmap](Roadmap) | Current status and planned work |
+| Guide | Link |
+|-------|------|
+| **Documentation home** | [docs/README.md](https://github.com/ponamtiwari/SmartDevIDE/blob/main/docs/README.md) |
+| Getting Started | [docs/getting-started.md](https://github.com/ponamtiwari/SmartDevIDE/blob/main/docs/getting-started.md) |
+| User Guide | [docs/user-guide.md](https://github.com/ponamtiwari/SmartDevIDE/blob/main/docs/user-guide.md) |
+| Configuration | [docs/configuration.md](https://github.com/ponamtiwari/SmartDevIDE/blob/main/docs/configuration.md) |
+| Development | [docs/development.md](https://github.com/ponamtiwari/SmartDevIDE/blob/main/docs/development.md) |
+| Troubleshooting | [docs/troubleshooting.md](https://github.com/ponamtiwari/SmartDevIDE/blob/main/docs/troubleshooting.md) |
 
 ---
 
-## Quick links
+## Quick start
 
-- **Repository:** [ponamtiwari/SmartDevIDE](https://github.com/ponamtiwari/SmartDevIDE)
-- **README:** [Main README](../README.md) in the repo
-- **Issues:** [Open an issue](https://github.com/ponamtiwari/SmartDevIDE/issues) for bugs or feature requests
-- **Discussions:** [Discussions](https://github.com/ponamtiwari/SmartDevIDE/discussions) (enable in repo Settings if you see 404)
-
----
-
-## Commands reference
-
-Command Palette: `Ctrl+Shift+P` (Windows/Linux) or `Cmd+Shift+P` (Mac). Type **Smart Dev IDE** to filter.
-
-| Command | Description | Shortcut (Mac) | Shortcut (Win/Linux) |
-|--------|-------------|----------------|----------------------|
-| Smart Dev IDE: Select Role | Choose developer role. Shown in status bar. | `Cmd+Alt+R` | `Ctrl+Alt+R` |
-| Smart Dev IDE: Select Model | Choose AI model. Shown in status bar. | `Cmd+Alt+M` | `Ctrl+Alt+M` |
-| Smart Dev IDE: Generate Code | Generate code with AI. Inserts or replaces in editor. | `Cmd+Shift+G` | `Ctrl+Shift+G` |
-| Smart Dev IDE: Auto-Detect Role | Suggest role from file type. | `Cmd+Alt+D` | `Ctrl+Alt+D` |
-| Smart Dev IDE: Open Demo | Demo panel with role-based examples. | `Cmd+Alt+O` | `Ctrl+Alt+O` |
-| Smart Dev IDE: Generate Solution | Quick access to demo panel. | `Cmd+Alt+S` | `Ctrl+Alt+S` |
-| Smart Dev IDE: Enhance Prompt | See enhanced prompt (context + role). | `Cmd+Alt+E` | `Ctrl+Alt+E` |
-| Smart Dev IDE: Open Settings | Open Smart Dev IDE settings. | `Cmd+Alt+,` | `Ctrl+Alt+,` |
-| Smart Dev IDE: Show Status Info | Show role, model, and commands. | `Cmd+Alt+I` | `Ctrl+Alt+I` |
-| Smart Dev IDE: Fix with AI | AI-suggested fix (Quick Fix / lightbulb). | `Cmd+Alt+F` | `Ctrl+Alt+F` |
-| Smart Dev IDE: Explain | AI explanation (Quick Fix menu). | `Cmd+Alt+X` | `Ctrl+Alt+X` |
-| Smart Dev IDE: Security Review | Review for SQL injection, secrets, auth. | `Cmd+Alt+Y` | `Ctrl+Alt+Y` |
-| Smart Dev IDE: Generate Unit Tests | Unit tests for file or selection. | `Cmd+Alt+T` | `Ctrl+Alt+T` |
-| Smart Dev IDE: Generate Edge Cases | Tests for boundaries, invalid input. | `Cmd+Alt+U` | `Ctrl+Alt+U` |
-| Smart Dev IDE: Run Static Checks | ESLint, tsc, or php -l on current file. | `Cmd+Alt+C` | `Ctrl+Alt+C` |
-| Smart Dev IDE: Flag Untested / Risky Logic | Report on risky or untested patterns. | `Cmd+Alt+K` | `Ctrl+Alt+K` |
+1. Clone [ponamtiwari/SmartDevIDE](https://github.com/ponamtiwari/SmartDevIDE)
+2. Run `npm install && npm run package`
+3. Install `smartdevide-1.0.0.vsix`
+4. Add your OpenAI API key in Settings
+5. Run **Smart Dev IDE: Select Role** → **Generate Code**
 
 ---
 
-## Getting started
+## Features
 
-1. **Install** – [Installation](Installation) (VSIX for VS Code / Cursor)
-2. **Set role** – `Cmd+Shift+P` → **Smart Dev IDE: Select Role**
-3. **Set model & API key** – **Smart Dev IDE: Select Model** and add your OpenAI (or other) key in Settings
-4. **Generate code** – `Cmd+Shift+G` or right-click → **Smart Dev IDE: Generate Code**
+See [Features](Features.md) for a feature overview, or the [User Guide](https://github.com/ponamtiwari/SmartDevIDE/blob/main/docs/user-guide.md) for complete usage.
 
-For full setup, see the [README](https://github.com/ponamtiwari/SmartDevIDE#readme).
+---
+
+## Links
+
+- **Repository:** [github.com/ponamtiwari/SmartDevIDE](https://github.com/ponamtiwari/SmartDevIDE)
+- **Issues:** [Report a bug](https://github.com/ponamtiwari/SmartDevIDE/issues)
+- **Contributing:** [CONTRIBUTING.md](https://github.com/ponamtiwari/SmartDevIDE/blob/main/CONTRIBUTING.md)
+
+---
+
+**Author:** Poonam Tiwari

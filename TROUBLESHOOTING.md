@@ -1,4 +1,6 @@
-# Smart Dev IDE – Commands not working
+# Smart Dev IDE – Troubleshooting
+
+> **See also:** [docs/troubleshooting.md](docs/troubleshooting.md) — full troubleshooting guide in the documentation.
 
 If **no Smart Dev IDE commands run** (Command Palette, keybindings, or right‑click), try this:
 
