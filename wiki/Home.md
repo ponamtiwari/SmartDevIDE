@@ -1,46 +1,76 @@
-# Welcome to the Smart Dev IDE Wiki
+# Smart Dev IDE
 
-**Smart Dev IDE** — AI coding assistant for VS Code and Cursor · **v1.0.0** · by **Poonam Tiwari**
+**AI-powered VS Code & Cursor extension** · **v1.0.0** · **Author: [Poonam Tiwari](https://github.com/ponamtiwari)**
 
 ---
 
-## Official documentation
+## What is Smart Dev IDE?
 
-Full documentation lives in the repository:
+Smart Dev IDE is a **TypeScript VS Code extension** that brings intelligent AI assistance directly into your editor. Unlike generic chat tools, it uses **8 role-based developer personas**, **project-aware prompts**, and built-in **security review** and **test generation** — so suggestions match your stack, style guide, and architecture.
 
-| Guide | Link |
-|-------|------|
-| **Documentation home** | [docs/README.md](https://github.com/ponamtiwari/SmartDevIDE/blob/main/docs/README.md) |
-| Getting Started | [docs/getting-started.md](https://github.com/ponamtiwari/SmartDevIDE/blob/main/docs/getting-started.md) |
-| User Guide | [docs/user-guide.md](https://github.com/ponamtiwari/SmartDevIDE/blob/main/docs/user-guide.md) |
-| Configuration | [docs/configuration.md](https://github.com/ponamtiwari/SmartDevIDE/blob/main/docs/configuration.md) |
-| Development | [docs/development.md](https://github.com/ponamtiwari/SmartDevIDE/blob/main/docs/development.md) |
-| Troubleshooting | [docs/troubleshooting.md](https://github.com/ponamtiwari/SmartDevIDE/blob/main/docs/troubleshooting.md) |
+**Supported editors:** Visual Studio Code · Cursor IDE
+
+---
+
+## Highlights
+
+| Capability | Description |
+|------------|-------------|
+| **Role-based AI** | Backend, Laravel, React, QA, Tech Lead, and 3 more personas |
+| **Generate Code** | Context-aware code generation with prompt enhancement |
+| **Inline completions** | Ghost-text suggestions as you type |
+| **Fix with AI** | Quick Fix on errors via the lightbulb menu |
+| **Security Review** | Scan for SQL injection, secrets, weak auth, XSS |
+| **Testing tools** | Unit tests, edge cases, static checks, risk reports |
+| **Style-aware** | Reads ESLint, Prettier, PHP-CS-Fixer, folder structure |
 
 ---
 
 ## Quick start
 
-1. Clone [ponamtiwari/SmartDevIDE](https://github.com/ponamtiwari/SmartDevIDE)
-2. Run `npm install && npm run package`
-3. Install `smartdevide-1.0.0.vsix`
-4. Add your OpenAI API key in Settings
-5. Run **Smart Dev IDE: Select Role** → **Generate Code**
+```
+1. Clone the repo → npm install → npm run package
+2. Install smartdevide-1.0.0.vsix in VS Code or Cursor
+3. Settings → smartdevide → enable OpenAI + add API key
+4. Cmd+Shift+P → Smart Dev IDE: Select Role
+5. Cmd+Shift+G → Smart Dev IDE: Generate Code
+```
+
+→ Detailed steps: **[Installation](Installation)**
 
 ---
 
-## Features
+## Documentation
 
-See [Features](Features.md) for a feature overview, or the [User Guide](https://github.com/ponamtiwari/SmartDevIDE/blob/main/docs/user-guide.md) for complete usage.
+| Page | Description |
+|------|-------------|
+| [Installation](Installation) | Install from VSIX, configure API keys |
+| [User Guide](User-Guide) | Roles, workflows, and daily usage |
+| [Commands Reference](Commands-Reference) | All commands and keyboard shortcuts |
+| [Features](Features) | Full feature breakdown |
+| [Configuration](Configuration) | Settings reference |
+| [Architecture](Architecture) | System design and components |
+| [About the Project](About-the-Project) | Tech stack and skills demonstrated |
+| [Roadmap](Roadmap) | Current status and planned work |
+
+**Repository docs:** [docs/](https://github.com/ponamtiwari/SmartDevIDE/tree/main/docs) folder on GitHub
+
+---
+
+## Tech stack
+
+`TypeScript` · `VS Code Extension API` · `OpenAI API` · `Node.js`
+
+**Domains:** PHP · Laravel · React · Full-stack · AI / Prompt Engineering
 
 ---
 
 ## Links
 
-- **Repository:** [github.com/ponamtiwari/SmartDevIDE](https://github.com/ponamtiwari/SmartDevIDE)
-- **Issues:** [Report a bug](https://github.com/ponamtiwari/SmartDevIDE/issues)
-- **Contributing:** [CONTRIBUTING.md](https://github.com/ponamtiwari/SmartDevIDE/blob/main/CONTRIBUTING.md)
+- **Source code:** [github.com/ponamtiwari/SmartDevIDE](https://github.com/ponamtiwari/SmartDevIDE)
+- **Report a bug:** [Open an issue](https://github.com/ponamtiwari/SmartDevIDE/issues/new?template=bug_report.md)
+- **License:** MIT · Copyright © Poonam Tiwari
 
 ---
 
-**Author:** Poonam Tiwari
+*Built by [Poonam Tiwari](https://github.com/ponamtiwari)*

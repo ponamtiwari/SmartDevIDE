@@ -1,35 +1,48 @@
 # Smart Dev IDE Roadmap
 
-Current status and planned improvements.
+**Current version:** 1.0.0 · **Author:** Poonam Tiwari
 
 ---
 
-## Current status (v1.0)
+## ✅ Shipped (v1.0.0)
 
-- Role-based AI (8 roles)  
-- Multi-model (OpenAI, Anthropic, Google, Cursor)  
-- Inline completions, Fix with AI, Explain  
-- Generate Code with optional testing/validation quick pick  
-- Security Review (SQL injection, secrets, auth)  
-- Testing & Validation: unit tests, edge cases, static checks, flag risky logic  
-- Project style auto-learn (ESLint, Prettier, PHP-CS-Fixer, naming, folder structure)  
-- Whole-project context and framework detection  
-- VS Code and Cursor support via VSIX  
-
----
-
-## Planned / ideas
-
-- **Marketplace** – Publish to VS Code Marketplace for one-click install  
-- **Ollama / local models** – Use local LLMs without an API key  
-- **More providers** – Additional model backends as needed  
-- **Test runner integration** – Run generated tests from the editor  
-- **Configurable “offer testing after Generate Code”** – Toggle the quick pick in settings  
+- [x] 8 role-based developer personas
+- [x] Multi-model configuration (OpenAI, Anthropic, Google, Cursor)
+- [x] Generate Code with prompt enhancement
+- [x] Inline completions (ghost text)
+- [x] Fix with AI & Explain (Quick Fix)
+- [x] Security Review (SQL injection, secrets, auth)
+- [x] Unit tests, edge cases, static checks, risk flagging
+- [x] Project style auto-learn (ESLint, Prettier, PHP-CS-Fixer)
+- [x] Framework detection (Laravel, React, Vue, Angular, etc.)
+- [x] VS Code + Cursor support via VSIX
+- [x] Demo panel with role-based examples
 
 ---
 
-## How to contribute
+## 🔜 Planned
 
-- **Bugs / features:** [Open an issue](https://github.com/ponamtiwari/SmartDevIDE/issues)  
-- **Ideas / questions:** Use [Discussions](https://github.com/ponamtiwari/SmartDevIDE/discussions) (if enabled)  
-- **Code:** Check README and CONTRIBUTING (if present) for how to build and run tests  
+| Item | Priority | Notes |
+|------|----------|-------|
+| VS Code Marketplace publish | High | One-click install |
+| Anthropic / Google code generation | Medium | Currently OpenAI for Generate Code |
+| Ollama / local models | Medium | Offline AI support |
+| Test runner integration | Low | Run generated tests in editor |
+| Configurable post-generate menu | Low | Toggle testing quick-pick |
+
+---
+
+## 💡 Ideas
+
+- Team/shared role presets
+- Project-level `.smartdevide.json` config
+- Cost tracking dashboard per model
+- Custom role templates
+
+---
+
+## Contribute
+
+- **Bugs & features:** [Open an issue](https://github.com/ponamtiwari/SmartDevIDE/issues)
+- **Ideas:** [Discussions](https://github.com/ponamtiwari/SmartDevIDE/discussions)
+- **Code:** [Contributing guide](https://github.com/ponamtiwari/SmartDevIDE/blob/main/CONTRIBUTING.md)

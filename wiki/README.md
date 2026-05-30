@@ -1,37 +1,41 @@
-# Wiki content for GitHub
+# GitHub Wiki — Smart Dev IDE
 
-These Markdown files are the source for the **GitHub Wiki** so they display at **https://github.com/ponamtiwari/SmartDevIDE/wiki**.
+Source files for the **[GitHub Wiki](https://github.com/ponamtiwari/SmartDevIDE/wiki)**.
 
-## Option A: Push from repo (recommended – content shows at Wiki URL)
+## Wiki pages
 
-1. **Enable Wiki** on the repo: **Settings** → **Features** → check **Wiki**.
-2. **Create the first page once** on GitHub so the wiki repo exists: open the [Wiki](https://github.com/ponamtiwari/SmartDevIDE/wiki), click **Create the first page**, add any title (e.g. `Home`), paste **Home.md** content, save.
-3. **From the repo root** (IDE Extension folder), run:
-   ```bash
-   chmod +x scripts/publish-wiki-to-github.sh
-   ./scripts/publish-wiki-to-github.sh
-   ```
-4. The script clones the wiki repo, copies **Home.md**, **Features.md**, **Installation.md**, and **Roadmap.md** into it, and pushes. Your wiki URLs will then show this content:
-   - https://github.com/ponamtiwari/SmartDevIDE/wiki
-   - https://github.com/ponamtiwari/SmartDevIDE/wiki/Features
-   - https://github.com/ponamtiwari/SmartDevIDE/wiki/Installation
-   - https://github.com/ponamtiwari/SmartDevIDE/wiki/Roadmap
+| File | Wiki URL |
+|------|----------|
+| `Home.md` | [/wiki](https://github.com/ponamtiwari/SmartDevIDE/wiki) |
+| `Installation.md` | [/wiki/Installation](https://github.com/ponamtiwari/SmartDevIDE/wiki/Installation) |
+| `User-Guide.md` | [/wiki/User-Guide](https://github.com/ponamtiwari/SmartDevIDE/wiki/User-Guide) |
+| `Commands-Reference.md` | [/wiki/Commands-Reference](https://github.com/ponamtiwari/SmartDevIDE/wiki/Commands-Reference) |
+| `Features.md` | [/wiki/Features](https://github.com/ponamtiwari/SmartDevIDE/wiki/Features) |
+| `Configuration.md` | [/wiki/Configuration](https://github.com/ponamtiwari/SmartDevIDE/wiki/Configuration) |
+| `Architecture.md` | [/wiki/Architecture](https://github.com/ponamtiwari/SmartDevIDE/wiki/Architecture) |
+| `About-the-Project.md` | [/wiki/About-the-Project](https://github.com/ponamtiwari/SmartDevIDE/wiki/About-the-Project) |
+| `Roadmap.md` | [/wiki/Roadmap](https://github.com/ponamtiwari/SmartDevIDE/wiki/Roadmap) |
+| `_Sidebar.md` | Sidebar navigation (auto) |
 
-## Option B: Copy-paste in the browser
+## Publish to GitHub Wiki
 
-1. Open **https://github.com/ponamtiwari/SmartDevIDE/wiki**
-2. Click **Create the first page** (or **New Page** for more).
-3. For **Home**: title `Home`, paste **Home.md** → Save.
-4. **New Page** → title `Features`, paste **Features.md** → Save.
-5. Repeat for **Installation** (Installation.md) and **Roadmap** (Roadmap.md).
+### Step 1 — Create first page (one time only)
 
-## Files in this folder
+1. Open [SmartDevIDE Wiki](https://github.com/ponamtiwari/SmartDevIDE/wiki)
+2. Click **Create the first page**
+3. Title: `Home`
+4. Paste all content from **`wiki/Home.md`**
+5. Click **Save Page**
 
-| File | Wiki page URL |
-|------|----------------|
-| Home.md | .../wiki (home) |
-| Features.md | .../wiki/Features |
-| Installation.md | .../wiki/Installation |
-| Roadmap.md | .../wiki/Roadmap |
+### Step 2 — Push all pages
 
-Internal links in the markdown (e.g. `[Features](Features)`) work once those pages exist.
+```bash
+chmod +x scripts/publish-wiki-to-github.sh
+./scripts/publish-wiki-to-github.sh
+```
+
+Requires git push access to the wiki repo (same credentials as the main repo).
+
+## Manual alternative
+
+Create each page on GitHub with **New Page** and paste the matching `.md` file content.

@@ -94,4 +94,8 @@ Controlled by **Project Style: Enabled** in settings (on by default).
 - **VS Code** – Full support  
 - **Cursor** – Full support; install from the same VSIX  
 
-See [Installation](Installation) for steps.
+---
+
+## Next steps
+
+→ [Installation](Installation) · [User Guide](User-Guide) · [Commands Reference](Commands-Reference) · [Configuration](Configuration)

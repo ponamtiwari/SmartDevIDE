@@ -56,6 +56,7 @@ code --install-extension smartdevide-1.0.0.vsix
 | Guide | Description |
 |-------|-------------|
 | [**Documentation Index**](docs/README.md) | Start here |
+| [**GitHub Wiki**](https://github.com/ponamtiwari/SmartDevIDE/wiki) | Wiki documentation |
 | [Getting Started](docs/getting-started.md) | Install, configure, first command |
 | [User Guide](docs/user-guide.md) | Roles, commands, workflows |
 | [Configuration](docs/configuration.md) | All `smartdevide.*` settings |

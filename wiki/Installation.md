@@ -1,72 +1,88 @@
 # Installation
 
-How to install Smart Dev IDE in **VS Code** and **Cursor**.
+Install Smart Dev IDE in **VS Code** or **Cursor**.
 
 ---
 
 ## Prerequisites
 
-- **VS Code** or **Cursor**
-- A **Smart Dev IDE VSIX** file (e.g. `smartdevide-2.0.2.vsix` from the [Releases](https://github.com/ponamtiwari/SmartDevIDE/releases) or built locally with `npm run package`)
+| Requirement | Details |
+|-------------|---------|
+| Editor | VS Code 1.75+ or Cursor |
+| OpenAI API key | Required for code generation |
+| Node.js 18+ | Only if building from source |
 
 ---
 
-## Install from VSIX (VS Code)
-
-1. Download the `.vsix` file (e.g. from Releases or build it in the repo).
-2. Open **VS Code**.
-3. Press **Ctrl+Shift+P** (Windows/Linux) or **Cmd+Shift+P** (Mac).
-4. Run **Extensions: Install from VSIX…**.
-5. Select the `.vsix` file and confirm.
-6. Reload VS Code if prompted.
-
----
-
-## Install from VSIX (Cursor)
-
-1. Download the `.vsix` file.
-2. Open **Cursor**.
-3. **Option A – Command Palette**
-   - **Cmd+Shift+P** (Mac) or **Ctrl+Shift+P** (Windows/Linux).
-   - Run **Extensions: Install from VSIX…**.
-   - Choose the `.vsix` file.
-4. **Option B – Extensions view**
-   - Open Extensions (`Cmd+Shift+X` / `Ctrl+Shift+X`).
-   - Click **…** (More Actions) → **Install from VSIX…**.
-   - Select the `.vsix` file.
-5. Reload Cursor if prompted.
-
-Cursor uses the same VS Code extension format, so the same VSIX works in both.
-
----
-
-## After installation
-
-1. **Select role** – `Cmd+Shift+P` / `Ctrl+Shift+P` → **Smart Dev IDE: Select Role**  
-2. **Select model** – **Smart Dev IDE: Select Model**  
-3. **Add API key** (e.g. OpenAI) – Settings → search “smartdevide” → set **OpenAI API Key**  
-4. **Generate code** – `Cmd+Shift+G` or **Smart Dev IDE: Generate Code** from the palette  
-
----
-
-## Building the VSIX yourself
-
-From the extension repo root:
+## Option 1 — Build from source (recommended)
 
 ```bash
+git clone https://github.com/ponamtiwari/SmartDevIDE.git
+cd SmartDevIDE
 npm install
-npm run compile
 npm run package
 ```
 
-The VSIX is created in the project folder (e.g. `smartdevide-2.0.2.vsix`).
+This creates **`smartdevide-1.0.0.vsix`** in the project folder.
+
+### Install in VS Code
+
+```bash
+code --install-extension smartdevide-1.0.0.vsix
+```
+
+Or: `Cmd+Shift+P` → **Extensions: Install from VSIX…** → select the file
+
+### Install in Cursor
+
+```bash
+cursor --install-extension smartdevide-1.0.0.vsix
+```
+
+Same VSIX works in both editors.
+
+---
+
+## Option 2 — VS Code Marketplace
+
+> Coming soon. Use Option 1 until published.
+
+---
+
+## Configure API key
+
+1. Open Settings (`Cmd+,` / `Ctrl+,`)
+2. Search `smartdevide`
+3. **Smart Dev IDE › Models › Openai**
+4. Enable **Enabled** ✓
+5. Paste your key in **Api Key**
+
+Get a key: [OpenAI Platform](https://platform.openai.com/api-keys)
+
+---
+
+## First run checklist
+
+- [ ] Extension installed and window reloaded
+- [ ] OpenAI enabled with API key
+- [ ] **Smart Dev IDE: Select Role** — choose a persona
+- [ ] **Smart Dev IDE: Select Model** — choose GPT-4 Turbo
+- [ ] **Smart Dev IDE: Generate Code** — test with a prompt
+- [ ] **Smart Dev IDE: Show Status Info** — verify setup
 
 ---
 
 ## Troubleshooting
 
-- **Commands not found** – Reload the window: Command Palette → **Developer: Reload Window**  
-- **API errors** – Check your API key in Settings and that the chosen model is enabled  
-- **Cursor** – Use the same steps as VS Code; the extension is compatible  
+| Issue | Fix |
+|-------|-----|
+| Commands not found | Reload window: **Developer: Reload Window** |
+| No models listed | Enable OpenAI + add API key in Settings |
+| Generate Code fails | Select an OpenAI model; check API key |
+| No ghost text | Enable Inline Suggest in editor + `inlineCompletion.enabled` |
 
-For more help, see the main [README](https://github.com/ponamtiwari/SmartDevIDE#readme) or open an [Issue](https://github.com/ponamtiwari/SmartDevIDE/issues).
+→ More help: [User Guide](User-Guide)
+
+---
+
+**Next:** [User Guide](User-Guide) · [Configuration](Configuration)

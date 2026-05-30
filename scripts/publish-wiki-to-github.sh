@@ -1,13 +1,11 @@
 #!/usr/bin/env bash
-# Push wiki content from wiki/*.md to the GitHub Wiki so it displays at
+# Push wiki content from wiki/*.md to the GitHub Wiki
 # https://github.com/ponamtiwari/SmartDevIDE/wiki
 #
-# Prerequisites:
-# 1. Enable Wiki on the repo (Settings → Features → Wiki).
-# 2. Create the first page once on GitHub (e.g. paste Home.md) so the wiki repo exists.
-# 3. You have push access to the repo.
+# FIRST TIME ONLY: Create the first wiki page on GitHub (paste Home.md content),
+# then run this script to sync all pages.
 #
-# Usage: run from the repo root (IDE Extension): ./scripts/publish-wiki-to-github.sh
+# Usage: ./scripts/publish-wiki-to-github.sh
 
 set -e
 REPO="ponamtiwari/SmartDevIDE"
@@ -18,24 +16,35 @@ WIKI_SRC="$REPO_ROOT/wiki"
 TMP_WIKI=$(mktemp -d 2>/dev/null || mktemp -d -t 'smartdevide-wiki')
 
 echo "Cloning wiki repo..."
-git clone "$WIKI_REPO" "$TMP_WIKI"
+if ! git clone "$WIKI_REPO" "$TMP_WIKI" 2>/dev/null; then
+  echo ""
+  echo "ERROR: Could not clone the wiki repo."
+  echo "Create the first wiki page on GitHub first:"
+  echo "  1. Open https://github.com/${REPO}/wiki"
+  echo "  2. Click 'Create the first page'"
+  echo "  3. Title: Home — paste content from wiki/Home.md — Save"
+  echo "  4. Run this script again"
+  rm -rf "$TMP_WIKI"
+  exit 1
+fi
 
 echo "Copying wiki pages..."
-for f in "$WIKI_SRC"/Home.md "$WIKI_SRC"/Features.md "$WIKI_SRC"/Installation.md "$WIKI_SRC"/Roadmap.md; do
+for f in "$WIKI_SRC"/*.md; do
   [ -f "$f" ] && cp "$f" "$TMP_WIKI/" && echo "  - $(basename "$f")"
 done
 
 cd "$TMP_WIKI"
-if git diff --quiet && git diff --staged --quiet 2>/dev/null; then
+git add -A
+if git diff --staged --quiet 2>/dev/null; then
   echo "No wiki changes to push."
   rm -rf "$TMP_WIKI"
   exit 0
 fi
 
-git add -A
-git commit -m "Update wiki from repo wiki/ content" || true
+git commit -m "Update Smart Dev IDE wiki documentation"
 echo "Pushing to GitHub Wiki..."
 git push origin master 2>/dev/null || git push origin main 2>/dev/null || git push
 
 rm -rf "$TMP_WIKI"
-echo "Done. Wiki is at: https://github.com/${REPO}/wiki"
+echo ""
+echo "Done! Wiki live at: https://github.com/${REPO}/wiki"
