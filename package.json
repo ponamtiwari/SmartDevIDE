@@ -1,0 +1,485 @@
+{
+  "name": "smartdevide",
+  "displayName": "SmartDevIDE",
+  "description": "Enhanced AI coding assistant with role-based behavior, multi-model support, and intelligent prompt enhancement. Created by Poonam Tiwari.",
+  "version": "1.0.0",
+  "publisher": "poonamtiwari",
+  "author": "Poonam Tiwari",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Machine Learning",
+    "Other"
+  ],
+  "keywords": [
+    "ai",
+    "assistant",
+    "copilot",
+    "laravel",
+    "react",
+    "php",
+    "multi-model",
+    "openai",
+    "claude",
+    "gemini"
+  ],
+  "activationEvents": [
+    "onStartupFinished",
+    "onCommand:smartdevide.selectRole",
+    "onCommand:smartdevide.selectModel",
+    "onCommand:smartdevide.generateCode",
+    "onCommand:smartdevide.openDemo",
+    "onCommand:smartdevide.generateSolution",
+    "onCommand:smartdevide.enhancePrompt",
+    "onCommand:smartdevide.openSettings",
+    "onCommand:smartdevide.showInfo",
+    "onCommand:smartdevide.autoDetectRole"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "smartdevide.selectRole",
+        "title": "SmartDevIDE: Select Role",
+        "category": "SmartDevIDE"
+      },
+      {
+        "command": "smartdevide.selectModel",
+        "title": "SmartDevIDE: Select Model",
+        "category": "SmartDevIDE"
+      },
+      {
+        "command": "smartdevide.autoDetectRole",
+        "title": "SmartDevIDE: Auto-Detect Role",
+        "category": "SmartDevIDE"
+      },
+      {
+        "command": "smartdevide.generateCode",
+        "title": "SmartDevIDE: Generate Code",
+        "category": "SmartDevIDE"
+      },
+      {
+        "command": "smartdevide.openDemo",
+        "title": "SmartDevIDE: Open Demo",
+        "category": "SmartDevIDE"
+      },
+      {
+        "command": "smartdevide.generateSolution",
+        "title": "SmartDevIDE: Generate Solution",
+        "category": "SmartDevIDE"
+      },
+      {
+        "command": "smartdevide.enhancePrompt",
+        "title": "SmartDevIDE: Enhance Prompt",
+        "category": "SmartDevIDE"
+      },
+      {
+        "command": "smartdevide.openSettings",
+        "title": "SmartDevIDE: Open Settings",
+        "category": "SmartDevIDE"
+      },
+      {
+        "command": "smartdevide.showInfo",
+        "title": "SmartDevIDE: Show Status Info",
+        "category": "SmartDevIDE"
+      },
+      {
+        "command": "smartdevide.fixWithAI",
+        "title": "SmartDevIDE: Fix with AI",
+        "category": "SmartDevIDE"
+      },
+      {
+        "command": "smartdevide.explainWithAI",
+        "title": "SmartDevIDE: Explain",
+        "category": "SmartDevIDE"
+      },
+      {
+        "command": "smartdevide.securityReview",
+        "title": "SmartDevIDE: Security Review",
+        "category": "SmartDevIDE"
+      },
+      {
+        "command": "smartdevide.generateUnitTests",
+        "title": "SmartDevIDE: Generate Unit Tests",
+        "category": "SmartDevIDE"
+      },
+      {
+        "command": "smartdevide.generateEdgeCases",
+        "title": "SmartDevIDE: Generate Edge Cases",
+        "category": "SmartDevIDE"
+      },
+      {
+        "command": "smartdevide.runStaticChecks",
+        "title": "SmartDevIDE: Run Static Checks",
+        "category": "SmartDevIDE"
+      },
+      {
+        "command": "smartdevide.flagUntestedRisky",
+        "title": "SmartDevIDE: Flag Untested / Risky Logic",
+        "category": "SmartDevIDE"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "smartdevide.generateCode",
+        "key": "ctrl+shift+g",
+        "mac": "cmd+shift+g",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "smartdevide.selectRole",
+        "key": "ctrl+alt+r",
+        "mac": "cmd+alt+r",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "smartdevide.selectModel",
+        "key": "ctrl+alt+m",
+        "mac": "cmd+alt+m",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "smartdevide.autoDetectRole",
+        "key": "ctrl+alt+d",
+        "mac": "cmd+alt+d",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "smartdevide.openDemo",
+        "key": "ctrl+alt+o",
+        "mac": "cmd+alt+o"
+      },
+      {
+        "command": "smartdevide.generateSolution",
+        "key": "ctrl+alt+s",
+        "mac": "cmd+alt+s"
+      },
+      {
+        "command": "smartdevide.enhancePrompt",
+        "key": "ctrl+alt+e",
+        "mac": "cmd+alt+e"
+      },
+      {
+        "command": "smartdevide.openSettings",
+        "key": "ctrl+alt+,",
+        "mac": "cmd+alt+,"
+      },
+      {
+        "command": "smartdevide.showInfo",
+        "key": "ctrl+alt+i",
+        "mac": "cmd+alt+i"
+      },
+      {
+        "command": "smartdevide.fixWithAI",
+        "key": "ctrl+alt+f",
+        "mac": "cmd+alt+f",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "smartdevide.explainWithAI",
+        "key": "ctrl+alt+x",
+        "mac": "cmd+alt+x",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "smartdevide.securityReview",
+        "key": "ctrl+alt+y",
+        "mac": "cmd+alt+y",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "smartdevide.generateUnitTests",
+        "key": "ctrl+alt+t",
+        "mac": "cmd+alt+t",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "smartdevide.generateEdgeCases",
+        "key": "ctrl+alt+u",
+        "mac": "cmd+alt+u",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "smartdevide.runStaticChecks",
+        "key": "ctrl+alt+c",
+        "mac": "cmd+alt+c",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "smartdevide.flagUntestedRisky",
+        "key": "ctrl+alt+k",
+        "mac": "cmd+alt+k",
+        "when": "editorTextFocus"
+      }
+    ],
+    "menus": {
+      "commandPalette": [
+        { "command": "smartdevide.selectRole" },
+        { "command": "smartdevide.selectModel" },
+        { "command": "smartdevide.generateCode" },
+        { "command": "smartdevide.openDemo" },
+        { "command": "smartdevide.enhancePrompt" },
+        { "command": "smartdevide.showInfo" },
+        { "command": "smartdevide.securityReview" },
+        { "command": "smartdevide.generateUnitTests" },
+        { "command": "smartdevide.generateEdgeCases" },
+        { "command": "smartdevide.runStaticChecks" },
+        { "command": "smartdevide.flagUntestedRisky" }
+      ],
+      "editor/context": [
+        {
+          "command": "smartdevide.generateCode",
+          "when": "editorTextFocus",
+          "group": "SmartDevIDE"
+        },
+        {
+          "command": "smartdevide.securityReview",
+          "when": "editorTextFocus",
+          "group": "SmartDevIDE"
+        },
+        {
+          "command": "smartdevide.generateUnitTests",
+          "when": "editorTextFocus",
+          "group": "SmartDevIDE"
+        },
+        {
+          "command": "smartdevide.generateEdgeCases",
+          "when": "editorTextFocus",
+          "group": "SmartDevIDE"
+        },
+        {
+          "command": "smartdevide.runStaticChecks",
+          "when": "editorTextFocus",
+          "group": "SmartDevIDE"
+        },
+        {
+          "command": "smartdevide.flagUntestedRisky",
+          "when": "editorTextFocus",
+          "group": "SmartDevIDE"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "SmartDevIDE",
+      "properties": {
+        "smartdevide.defaultRole": {
+          "type": "string",
+          "enum": [
+            "backend",
+            "laravel",
+            "corephp",
+            "react",
+            "frontend",
+            "qa",
+            "techlead",
+            "pm"
+          ],
+          "default": "backend",
+          "description": "Default developer role on startup"
+        },
+        "smartdevide.defaultModel": {
+          "type": "string",
+          "default": "gpt-4-turbo",
+          "description": "Default AI model to use"
+        },
+        "smartdevide.autoPromptEnhancement": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically enhance prompts with context and role-specific instructions"
+        },
+        "smartdevide.contextAwareness": {
+          "type": "boolean",
+          "default": true,
+          "description": "Include file and project context in prompts"
+        },
+        "smartdevide.roleAutoSwitch": {
+          "type": "boolean",
+          "default": false,
+          "description": "Automatically switch role based on current file type"
+        },
+        "smartdevide.showRoleInStatusBar": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show current role in status bar"
+        },
+        "smartdevide.showModelInStatusBar": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show current AI model in status bar"
+        },
+        "smartdevide.telemetryEnabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Send anonymous usage data to improve the extension"
+        },
+        "smartdevide.models.openai.enabled": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable OpenAI models"
+        },
+        "smartdevide.models.openai.apiKey": {
+          "type": "string",
+          "default": "",
+          "description": "OpenAI API key",
+          "markdownDescription": "Your OpenAI API key. Get one from [OpenAI Platform](https://platform.openai.com/api-keys)"
+        },
+        "smartdevide.models.openai.organization": {
+          "type": "string",
+          "default": "",
+          "description": "OpenAI organization ID (optional)"
+        },
+        "smartdevide.models.openai.defaultModel": {
+          "type": "string",
+          "enum": [
+            "gpt-4-turbo",
+            "gpt-4",
+            "gpt-3.5-turbo"
+          ],
+          "default": "gpt-4-turbo",
+          "description": "Default OpenAI model"
+        },
+        "smartdevide.models.anthropic.enabled": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable Anthropic Claude models"
+        },
+        "smartdevide.models.anthropic.apiKey": {
+          "type": "string",
+          "default": "",
+          "description": "Anthropic API key",
+          "markdownDescription": "Your Anthropic API key. Get one from [Anthropic Console](https://console.anthropic.com/)"
+        },
+        "smartdevide.models.anthropic.defaultModel": {
+          "type": "string",
+          "enum": [
+            "claude-3-opus",
+            "claude-3-sonnet",
+            "claude-3-haiku"
+          ],
+          "default": "claude-3-sonnet",
+          "description": "Default Anthropic model"
+        },
+        "smartdevide.models.google.enabled": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable Google Gemini models"
+        },
+        "smartdevide.models.google.apiKey": {
+          "type": "string",
+          "default": "",
+          "description": "Google AI API key",
+          "markdownDescription": "Your Google AI API key. Get one from [Google AI Studio](https://makersuite.google.com/app/apikey)"
+        },
+        "smartdevide.models.google.defaultModel": {
+          "type": "string",
+          "enum": [
+            "gemini-pro"
+          ],
+          "default": "gemini-pro",
+          "description": "Default Google model"
+        },
+        "smartdevide.models.cursor.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable Cursor native models"
+        },
+        "smartdevide.models.cursor.defaultModel": {
+          "type": "string",
+          "default": "cursor-default",
+          "description": "Default Cursor model"
+        },
+        "smartdevide.promptEnhancement.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable automatic prompt enhancement"
+        },
+        "smartdevide.promptEnhancement.contextAwareness": {
+          "type": "boolean",
+          "default": true,
+          "description": "Add file and project context to prompts"
+        },
+        "smartdevide.promptEnhancement.roleBasedEnhancement": {
+          "type": "boolean",
+          "default": true,
+          "description": "Add role-specific instructions to prompts"
+        },
+        "smartdevide.promptEnhancement.codePatternSuggestions": {
+          "type": "boolean",
+          "default": true,
+          "description": "Suggest code patterns based on role"
+        },
+        "smartdevide.promptEnhancement.bestPracticesInjection": {
+          "type": "boolean",
+          "default": true,
+          "description": "Include general best practices in prompts"
+        },
+        "smartdevide.promptEnhancement.securityChecks": {
+          "type": "boolean",
+          "default": true,
+          "description": "Add security guidelines to prompts"
+        },
+        "smartdevide.inlineCompletion.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable AI-powered inline code suggestions (ghost text) as you type"
+        },
+        "smartdevide.inlineCompletion.maxTokens": {
+          "type": "number",
+          "default": 64,
+          "description": "Max tokens for each inline suggestion (lower = faster)"
+        },
+        "smartdevide.inlineCompletion.useFastModel": {
+          "type": "boolean",
+          "default": true,
+          "description": "Use GPT-3.5 Turbo for inline suggestions (faster). Turn off to use your selected model (e.g. GPT-4)."
+        },
+        "smartdevide.inlineCompletion.minPrefixLength": {
+          "type": "number",
+          "default": 1,
+          "description": "Minimum characters on current line before suggesting (automatic trigger)"
+        },
+        "smartdevide.inlineCompletion.debug": {
+          "type": "boolean",
+          "default": false,
+          "description": "Log inline suggestion activity to Output (SmartDevIDE) for troubleshooting"
+        },
+        "smartdevide.projectStyle.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Auto-learn project style from ESLint, Prettier, PHP-CS-Fixer and folder structure. Generated code will follow the project's style guide (never fight it)."
+        },
+        "smartdevide.suggestionMode": {
+          "type": "string",
+          "enum": ["safe", "minimal", "verbose"],
+          "default": "safe",
+          "description": "Suggestion mode: safe = only well-documented APIs, minimal = shortest suggestions (1 line when possible), verbose = may suggest longer blocks. Reduces hallucinated or made-up APIs."
+        },
+        "smartdevide.suggestionReasoningHint": {
+          "type": "boolean",
+          "default": false,
+          "description": "When enabled, suggestions may include a short comment hint (e.g. // uses Array.map) to show reasoning or API used. Helps judge relevance."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package",
+    "test": "npm run compile && node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@types/vscode": "^1.75.0",
+    "@vscode/vsce": "^2.22.0",
+    "typescript": "^5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/poonamtiwari/smartdevide"
+  },
+  "license": "MIT"
+}
